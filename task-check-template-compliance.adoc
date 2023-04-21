@@ -87,7 +87,7 @@ Pour afficher un rapport de dérive pour les ressources créées à partir de vo
 
 === Informations sur l'état de la réplication BlueXP dans le rapport de dérive
 
-Quand link:task-define-templates.html#add-replication-functionality-to-a-volume["Activation de la réplication BlueXP sur un volume à l'aide de modèles"], Vous pouvez choisir d'afficher des informations de réplication plus détaillées dans le rapport de dérive en activant la dérive dans le champ « Activer la surveillance de l'intégrité de la réplication ». Lorsqu'il est activé, le rapport de dérive indique si l'état de santé de la relation de réplication BlueXP est sain ou non (dérivé), ainsi que le délai de décalage SnapMirror, l'état et la durée du dernier transfert.
+Quand link:task-define-templates.html#add-bluexp-classification-functionality-to-a-volume["Activation de la réplication BlueXP sur un volume à l'aide de modèles"], Vous pouvez choisir d'afficher des informations de réplication plus détaillées dans le rapport de dérive en activant la dérive dans le champ « Activer la surveillance de l'intégrité de la réplication ». Lorsqu'il est activé, le rapport de dérive indique si l'état de santé de la relation de réplication BlueXP est sain ou non (dérivé), ainsi que le délai de décalage SnapMirror, l'état et la durée du dernier transfert.
 
 Cette capture d'écran montre les détails de réplication d'une relation SnapMirror qui n'est pas intègre dans le rapport de dérive.
 

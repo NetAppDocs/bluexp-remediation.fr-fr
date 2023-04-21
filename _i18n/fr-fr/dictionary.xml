@@ -156,7 +156,6 @@
   <block id="0723f0287083e700309ab63bd37a0c33" category="section-title">Créez un modèle pour un volume Azure NetApp Files</block>
   <block id="38c68ceb833297ed3631cc6cc44141ab" category="paragraph">La création d'un modèle pour un volume Azure NetApp Files se fait de la même manière que la création d'un modèle pour un volume Cloud Volumes ONTAP.</block>
   <block id="98165316f4a6a7eb3b2eea00a7c71656" category="inline-link">Provisionnement de volumes Azure NetApp Files</block>
-  <block id="1dcec9f35c7e20c4011388d6173a9a3e" category="paragraph">Voir<block ref="71642e13367a6341a10e13f459821e6e" category="inline-link-rx"></block> Pour plus d'informations sur tous les paramètres à compléter dans le modèle de volume ANF.</block>
   <block id="31ea9a5156da1667ca8c913660cb04e8" category="paragraph"><block ref="31ea9a5156da1667ca8c913660cb04e8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b1198c02b1425b74b6391ffd99cbc74b" category="list-text">Sélectionnez *modèle vierge* et cliquez sur *commencer*.</block>
   <block id="ddc839fd59d3af096b5f24caa0aac73e" category="list-text">Sélectionnez *Créer un volume dans Azure NetApp Files* comme type de ressource à créer, puis cliquez sur *appliquer*.</block>
@@ -312,7 +311,6 @@
   <block id="23647b4aee667229f438bac6d37c6f14" category="list-text">Sélectionner<block ref="fce626f96b8a582bd914af9774e3f4bd" category="inline-link-rx"></block> que vous voulez utiliser.</block>
   <block id="28b7ceda6afe52e7cddb056ae1cc1b42" category="list-text">Choisissez une copie unique ou une planification de réplication récurrente.</block>
   <block id="a890fcd17657bbd0255d609a9ac66f87" category="inline-link-macro">Voyez ce que cela ressemble dans le rapport de dérive</block>
-  <block id="550aba8dd2351fcca6220e9726d1b0b4" category="list-text">Activez la surveillance de l'état de la réplication si vous souhaitez que le rapport de dérive inclut l'intégrité de la réplication de la relation SnapMirror ainsi que l'heure de décalage, l'état et l'heure du dernier transfert. <block ref="e9afe1d61d7f4e2024b782abd0cbb1af" category="inline-link-macro-rx"></block>.</block>
   <block id="a17ec67a32a0998705df91c25c3b8420" category="list-text">Indiquez si vous souhaitez définir une limite de taux de transfert, puis saisissez le taux maximal (en kilo-octets par seconde) auquel les données peuvent être transférées. Vous pouvez entrer une valeur fixe ou fournir un minimum et un maximum et laisser l'administrateur du stockage sélectionner une valeur dans cette plage.</block>
   <block id="e03c4d2a8455ec2482acf1f509382257" category="section-title">Que faire après avoir créé le modèle</block>
   <block id="856a9d1850ea33e764f9c6e201455be4" category="paragraph">Une fois le modèle créé, informez vos administrateurs du stockage qu'ils peuvent utiliser lors de la création de nouveaux volumes et environnements de travail.</block>
@@ -774,7 +772,6 @@
   <block id="e7ec4c4152826f2deedfea467894a855" category="paragraph"><block ref="e7ec4c4152826f2deedfea467894a855" category="inline-image-macro-rx" type="image"></block></block>
   <block id="af859a8aacc30e0bb1648f64ed76f23d" category="section-title">Informations sur l'état de la réplication BlueXP dans le rapport de dérive</block>
   <block id="dccc80768bfca83f2c18a964a2ada6e0" category="inline-link-macro">Activation de la réplication BlueXP sur un volume à l'aide de modèles</block>
-  <block id="9dd134a3f05a90dc02c4af5ebcb3faef" category="paragraph">Quand <block ref="079d9da8cb6e56b01a7d0344b4200bdf" category="inline-link-macro-rx"></block>, Vous pouvez choisir d'afficher des informations de réplication plus détaillées dans le rapport de dérive en activant la dérive dans le champ « Activer la surveillance de l'intégrité de la réplication ». Lorsqu'il est activé, le rapport de dérive indique si l'état de santé de la relation de réplication BlueXP est sain ou non (dérivé), ainsi que le délai de décalage SnapMirror, l'état et la durée du dernier transfert.</block>
   <block id="ff1a821ec32f5470f851de8ef3edd6a9" category="summary">Le service de correction BlueXP (AppTemplate) vous permet de standardiser la création de ressources pour vos environnements de travail BlueXP.</block>
   <block id="510f57bbfca743348ff245cb08dc02e3" category="doc">Documentation sur la correction BlueXP</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
@@ -849,4 +846,7 @@
   <block id="89bd41d8bc97392a23a93ae863b454bb" category="sidebar">Utilisez la correction BlueXP</block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Nouveautés</block>
   <block id="bdada2beda611e5479ba79eddd7f3b9f" category="sidebar">Ajoutez des fonctionnalités de sauvegarde, de classification ou de réplication à un volume</block>
+  <block id="3c66700164b4cb085d6e086bf6b7d73b" category="paragraph">Quand <block ref="438903b5e6182d9d4cc41396268e5cbc" category="inline-link-macro-rx"></block>, Vous pouvez choisir d'afficher des informations de réplication plus détaillées dans le rapport de dérive en activant la dérive dans le champ « Activer la surveillance de l'intégrité de la réplication ». Lorsqu'il est activé, le rapport de dérive indique si l'état de santé de la relation de réplication BlueXP est sain ou non (dérivé), ainsi que le délai de décalage SnapMirror, l'état et la durée du dernier transfert.</block>
+  <block id="c28223c3f7a03804f44448c7561c5f02" category="paragraph">Voir<block ref="6525ab64efdc6d693874df3da6739f52" category="inline-link-rx"></block> Pour plus d'informations sur tous les paramètres à compléter dans le modèle de volume ANF.</block>
+  <block id="8abfe8e6c06581937c37ec49be54c6d7" category="list-text">Activez la surveillance de l'état de la réplication si vous souhaitez que le rapport de dérive inclut l'intégrité de la réplication de la relation SnapMirror ainsi que l'heure de décalage, l'état et l'heure du dernier transfert. <block ref="1eb00ed04881df5d17ae6b01acb7f8fb" category="inline-link-macro-rx"></block>.</block>
 </blocks>

@@ -182,7 +182,7 @@ Voir <<Que faire après avoir créé le modèle,ce que vous devez dire à vos ut
 
 La création d'un modèle pour un volume Azure NetApp Files se fait de la même manière que la création d'un modèle pour un volume Cloud Volumes ONTAP.
 
-Voir https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-anf-volumes.html#creating-volumes["Provisionnement de volumes Azure NetApp Files"^] Pour plus d'informations sur tous les paramètres à compléter dans le modèle de volume ANF.
+Voir https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes["Provisionnement de volumes Azure NetApp Files"^] Pour plus d'informations sur tous les paramètres à compléter dans le modèle de volume ANF.
 
 .Étapes
 . Sélectionnez *Santé > correction*, cliquez sur l'onglet *modèles* et cliquez sur *Ajouter un nouveau modèle*.
@@ -695,7 +695,7 @@ image:screenshot_template_replication_policy.png["Capture d'écran de la page po
 +
 .. Sélectionner https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html#types-of-replication-policies["règle de réplication"^] que vous voulez utiliser.
 .. Choisissez une copie unique ou une planification de réplication récurrente.
-.. Activez la surveillance de l'état de la réplication si vous souhaitez que le rapport de dérive inclut l'intégrité de la réplication de la relation SnapMirror ainsi que l'heure de décalage, l'état et l'heure du dernier transfert. link:task-check-template-compliance.html#replication-health-details-in-the-drift-report["Voyez ce que cela ressemble dans le rapport de dérive"].
+.. Activez la surveillance de l'état de la réplication si vous souhaitez que le rapport de dérive inclut l'intégrité de la réplication de la relation SnapMirror ainsi que l'heure de décalage, l'état et l'heure du dernier transfert. link:task-check-template-compliance.html#bluexp-replication-health-details-in-the-drift-report["Voyez ce que cela ressemble dans le rapport de dérive"].
 .. Indiquez si vous souhaitez définir une limite de taux de transfert, puis saisissez le taux maximal (en kilo-octets par seconde) auquel les données peuvent être transférées. Vous pouvez entrer une valeur fixe ou fournir un minimum et un maximum et laisser l'administrateur du stockage sélectionner une valeur dans cette plage.
 
 
