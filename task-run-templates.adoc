@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-run-templates.html 
 keywords: templates, resource templates, services templates, volume templates, working environment templates 
-summary: 'Sélectionnez l"un des modèles d"applications que votre organisation a conçus pour créer des environnements de travail ou des volumes optimisés pour des charges de travail et des applications spécifiques. Vous pouvez également activer Cloud Backup, Cloud Data Sense et Replication (SnapMirror) sur les volumes ou sur des volumes existants.' 
+summary: 'Sélectionnez l"un des modèles d"applications que votre organisation a conçus pour créer des environnements de travail ou des volumes optimisés pour des charges de travail et des applications spécifiques. Ils vous permettent également d"activer la sauvegarde et la restauration BlueXP, la classification BlueXP et la réplication BlueXP (SnapMirror) sur les volumes ou sur les volumes existants.' 
 ---
 = Créez ou modifiez des ressources à l'aide de modèles
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Sélectionnez l"un des modèles d"applications que votre organisation 
 
 
 [role="lead"]
-Sélectionnez l'un des modèles d'applications que votre organisation a conçus pour créer des environnements de travail ou des volumes optimisés pour des charges de travail et des applications spécifiques. Les modèles vous permettent également d'activer https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["La sauvegarde dans le cloud"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Sens des données cloud"^], et https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["Réplication (SnapMirror)"^] sur les volumes créés ou sur les volumes existants.
+Sélectionnez l'un des modèles d'applications que votre organisation a conçus pour créer des environnements de travail ou des volumes optimisés pour des charges de travail et des applications spécifiques. Les modèles vous permettent également d'activer https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^], et https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication BlueXP"^] sur les volumes créés ou sur les volumes existants.
 
 Il est possible de créer des volumes pour les systèmes Cloud Volumes ONTAP, Azure NetApp Files et ONTAP sur site.
 
@@ -30,7 +30,7 @@ Pour commencer rapidement, suivez ces étapes ou faites défiler jusqu'aux secti
 
 
 [role="quick-margin-list"]
-* Si le modèle active un service cloud sur le volume, par exemple https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["La sauvegarde dans le cloud"^] ou https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Sens des données cloud"^], assurez-vous que le service est actif et sous licence dans votre environnement.
+* Si le modèle active un service cloud sur le volume, par exemple https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] ou https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^], assurez-vous que le service est actif et sous licence dans votre environnement.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Lancez le service modèles d'applications
@@ -51,7 +51,7 @@ Lisez les informations suivantes pour vous assurer que votre configuration est p
 * Lorsque vous créez un volume Cloud Volumes ONTAP, vérifiez que vous disposez d'un environnement de travail Cloud Volumes ONTAP.
 * Lorsque vous créez un volume ONTAP sur site, vérifiez que vous disposez d'un environnement de travail ONTAP sur site.
 * Lorsque vous créez un volume Azure NetApp Files, vérifiez que vous disposez d'un environnement de travail Azure NetApp Files.
-* Si le modèle active un service cloud sur le volume, par exemple  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["La sauvegarde dans le cloud"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Sens des données cloud"^], ou https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["Réplication (SnapMirror)"^], assurez-vous que le service est actif et sous licence dans votre environnement.
+* Si le modèle active un service cloud sur le volume, par exemple  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^], ou https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication BlueXP"^], assurez-vous que le service est actif et sous licence dans votre environnement.
 
 
 
@@ -68,7 +68,7 @@ Quelle que soit la méthode choisie, les détails des paramètres de volume que 
 
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Provisionnement de volumes Cloud Volumes ONTAP"^]
 * https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Provisionnement de volumes Azure NetApp Files"^]
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-ontap.html#creating-volumes-from-templates["Comment provisionner des volumes ONTAP sur site"^]
+* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates["Comment provisionner des volumes ONTAP sur site"^]
 
 
 
@@ -155,7 +155,7 @@ image:screenshot_template_run_from_dashboard_we.png["Capture d'écran montrant l
 
 == Sélectionnez et exécutez un modèle qui trouve les ressources existantes
 
-Vous pouvez exécuter un modèle qui trouve certaines ressources (par exemple, les volumes), puis active un service cloud sur ces ressources (par exemple, Cloud Backup), si votre entreprise a créé un modèle à l'aide de cette fonctionnalité. Lors de l'exécution du modèle, vous pouvez apporter des ajustements mineurs afin d'appliquer le service cloud uniquement aux ressources appropriées.
+Vous pouvez exécuter un modèle qui recherche certaines ressources (par exemple, les volumes), puis activer un service cloud sur ces ressources (par exemple, sauvegarde et restauration BlueXP), si votre entreprise a créé un modèle utilisant cette fonctionnalité. Lors de l'exécution du modèle, vous pouvez apporter des ajustements mineurs afin d'appliquer le service cloud uniquement aux ressources appropriées.
 
 .Étapes
 . Sélectionnez *Santé > correction* et cliquez sur l'onglet *modèles*.
@@ -173,13 +173,13 @@ La page _Run Template_ s'affiche et exécute immédiatement la recherche qui a �
 +
 image:screenshot_template_find_search_results.png["Capture d'écran montrant comment les volumes renvoyés à partir des critères de recherche de ressource de recherche."]
 
-. Si les résultats sont ce que vous aviez prévu, cochez la case pour chaque volume que vous souhaitez activer Cloud Backup à l'aide des critères de la section _Activer la sauvegarde dans le cloud sur volume_ du modèle et cliquez sur *Exécuter modèle*.
+. Si les résultats correspondent à vos attentes, cochez la case de chaque volume pour lequel vous souhaitez activer la sauvegarde et la restauration BlueXP en utilisant les critères de la section _Activer Cloud Backup sur Volume_ du modèle et cliquez sur *Exécuter le modèle*.
 +
 Si les résultats ne correspondent pas à vos attentes, cliquez sur image:screenshot_edit_icon.gif["modifier l'icône du crayon"] En regard de _Search Criteria_ et affiner la recherche.
 
 
 
 .Résultats
-Le modèle s'exécute et active Cloud Backup sur chaque volume sélectionné à partir des critères de recherche.
+Le modèle s'exécutera et il activera la sauvegarde et la restauration BlueXP sur chaque volume que vous avez vérifié à partir des critères de recherche.
 
 Toute erreur sera signalée dans la page _Exécuter votre modèle_ et vous pouvez résoudre les problèmes si nécessaire.

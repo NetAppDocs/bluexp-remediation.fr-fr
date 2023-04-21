@@ -14,7 +14,7 @@ summary: 'BlueXP vous permet d"appliquer des balises à vos ressources _existant
 
 
 [role="lead"]
-BlueXP (anciennement Cloud Manager) vous permet d'appliquer des balises à vos _ressources_ existantes pour vous aider à organiser et à gérer ces ressources. Les balises sont des métadonnées que vous pouvez utiliser pour regrouper les ressources et identifier les applications, les environnements, les régions, les codes de facturation, les fournisseurs cloud, entre autres.
+BlueXP vous permet d'appliquer des balises à vos ressources _existantes_ afin de faciliter l'organisation et la gestion de ces ressources. Les balises sont des métadonnées que vous pouvez utiliser pour regrouper les ressources et identifier les applications, les environnements, les régions, les codes de facturation, les fournisseurs cloud, entre autres.
 
 Les balises se composent d'une clé *tag* et d'une valeur *tag*. Par exemple, vous pouvez créer une clé de balise appelée « Environnement », puis ajouter des valeurs de balise « production » et « Test ». Une fois qu'elles sont appliquées à vos ressources, vous pouvez rapidement rechercher et afficher des ressources correspondant à la paire clé/valeur.
 

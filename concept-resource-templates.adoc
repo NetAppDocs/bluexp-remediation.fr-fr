@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-resource-templates.html 
 keywords: templates, overview, conceptual, resource templates, application templates, volume templates 
-summary: 'Le service AppTemplate vous permet de standardiser la création de ressources dans vos environnements de travail dans BlueXP. Par exemple, vous pouvez saisir les paramètres de code physique requis dans un « modèle de volume » qui sera appliqué ultérieurement lorsqu"un administrateur de stockage crée un volume à l"aide du modèle. Cela peut inclure le type, la taille, le protocole, la politique Snapshot, le fournisseur cloud, entre autres. Vous pouvez également activer certains services, comme Cloud Backup, pour chaque volume créé.' 
+summary: 'Le service de correction BlueXP vous permet de standardiser la création de ressources dans vos environnements de travail dans BlueXP. Par exemple, vous pouvez saisir les paramètres de code physique requis dans un « modèle de volume » qui sera appliqué ultérieurement lorsqu"un administrateur de stockage crée un volume à l"aide du modèle. Cela peut inclure le type, la taille, le protocole, la politique Snapshot, le fournisseur cloud, entre autres. Vous pouvez également activer certains services, comme la sauvegarde et la restauration BlueXP, pour chaque volume créé.' 
 ---
-= En savoir plus sur AppTemplate
+= Découvrez la résolution des problèmes BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Le service AppTemplate vous permet de standardiser la création de res
 
 
 [role="lead"]
-Le service AppTemplate vous permet de standardiser la création de ressources dans vos environnements de travail dans BlueXP (anciennement Cloud Manager). Par exemple, vous pouvez saisir les paramètres de code physique requis dans un « modèle de volume » qui sera appliqué ultérieurement lorsqu'un administrateur de stockage crée un volume à l'aide du modèle. Cela peut inclure le type, la taille, le protocole, la politique Snapshot, le fournisseur cloud, entre autres. Vous pouvez également activer certains services, comme Cloud Backup, pour chaque volume créé.
+Le service de correction BlueXP vous permet de standardiser la création de ressources dans vos environnements de travail dans BlueXP. Par exemple, vous pouvez saisir les paramètres de code physique requis dans un « modèle de volume » qui sera appliqué ultérieurement lorsqu'un administrateur de stockage crée un volume à l'aide du modèle. Cela peut inclure le type, la taille, le protocole, la politique Snapshot, le fournisseur cloud, entre autres. Vous pouvez également activer certains services, comme la sauvegarde et la restauration BlueXP, pour chaque volume créé.
 
 Avec les modèles proposés, vos administrateurs du stockage peuvent créer facilement des volumes optimisés en fonction des exigences de charge de travail pour chaque application déployée, comme les bases de données, la messagerie ou les services de streaming. Par ailleurs, vos architectes du stockage peuvent plus facilement gérer le quotidien de chaque volume, en sachant que chaque application est créée de façon optimale.
 
@@ -22,10 +22,10 @@ Avec les modèles proposés, vos administrateurs du stockage peuvent créer faci
 
 == Caractéristiques
 
-AppTemplate offre les fonctionnalités et avantages suivants :
+La correction BlueXP offre les fonctionnalités et avantages suivants :
 
 * Automatisation et amélioration de la conception et du développement de votre infrastructure
-* Fournit un emplacement unique pour activer différents services cloud NetApp, tels que Cloud Backup et Cloud Data Sense
+* Fournit un emplacement unique pour activer différents services cloud NetApp, tels que la sauvegarde et la restauration BlueXP et la classification BlueXP
 * Identifie les ressources qui ont été modifiées et qui ne sont plus conformes au modèle (à l'aide de la fonction « dérive »)
 +
 Pour le moment, vous devrez effectuer manuellement des ajustements afin de rétablir la conformité de la ressource avec le modèle. link:task-check-template-compliance.html["En savoir plus sur la dérive"].
@@ -49,20 +49,20 @@ Un modèle est une chaîne d'actions qui ont des valeurs prédéfinies. Vous pou
 
 *Actions de services :*
 
-* Activer https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["La sauvegarde dans le cloud"^] Sur les volumes (non applicable à Azure NetApp Files)
-* Activer https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Sens des données cloud"^] sur les volumes
-* Activer https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication"^] Sur les volumes (non applicable à Azure NetApp Files)
+* Activer https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] Sur les volumes (non applicable à Azure NetApp Files)
+* Activer https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^] sur les volumes
+* Activer https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication BlueXP"^] Sur les volumes (non applicable à Azure NetApp Files)
 
 
-Par exemple, vous pouvez créer un modèle qui crée un volume Cloud Volumes ONTAP. Vous pouvez également créer un volume Cloud Volumes ONTAP, puis exécuter Cloud Backup sur ce volume. Ou qui crée un volume Cloud Volumes ONTAP, puis active Cloud Backup _et_ Cloud Data Sense sur ce volume.
+Par exemple, vous pouvez créer un modèle qui crée un volume Cloud Volumes ONTAP. Ou qui crée un volume Cloud Volumes ONTAP, puis active la sauvegarde et la restauration BlueXP sur ce volume. Ou qui crée un volume Cloud Volumes ONTAP, puis active la classification BlueXP Backup and Recovery _and_ BlueXP sur ce volume.
 
 D'autres actions seront ajoutées au fil du temps par NetApp.
 
 
 
-== Fonctionnement d'AppTemplate
+== Fonctionnement de la résolution des problèmes BlueXP
 
-Le service AppTemplate est constitué de 3 pièces. Le modèle « actions » disponible, le modèle d'application personnalisé et la ressource déployée suite à l'exécution du modèle. L'image suivante montre la relation entre chaque composant :
+Le service de résolution des problèmes BlueXP est composé de 3 parties. Le modèle « actions » disponible, le modèle d'application personnalisé et la ressource déployée suite à l'exécution du modèle. L'image suivante montre la relation entre chaque composant :
 
 image:diagram_template_flow1.png["Diagramme des différents utilisateurs impliqués dans la création et l'utilisation de modèles d'application."]
 
@@ -87,15 +87,15 @@ Ils créent, par exemple, un volume qui sera utilisé pour une base de données 
 
 == Prix et licences
 
-La fonctionnalité AppTemplate ne nécessite pas de licence et est gratuite pour tous les utilisateurs de BlueXP.
+La fonctionnalité de résolution des problèmes de BlueXP ne nécessite aucune licence et est gratuite pour tous les utilisateurs de BlueXP.
 
 
-NOTE: Des modèles vous permettent d'appliquer un service cloud aux ressources créées, par exemple, pour activer Cloud Backup sur chaque volume. Dans ce cas, il existe des frais pour l'utilisation du service de sauvegarde et de l'espace de stockage objet utilisé par les fichiers de sauvegarde.
+NOTE: Les modèles vous permettent d'appliquer un service cloud à des ressources créées, par exemple, pour activer la sauvegarde et la restauration BlueXP sur chaque volume. Dans ce cas, il existe des frais pour l'utilisation du service de sauvegarde et de l'espace de stockage objet utilisé par les fichiers de sauvegarde.
 
 
 
 == Limites
 
-* Le service AppTemplate n'est pas pris en charge dans les régions Cloud du gouvernement ou dans les sites sans accès Internet.
+* Le service de correction BlueXP n'est pas pris en charge dans les régions Gov Cloud ou dans les sites sans accès Internet.
 * Vous ne pouvez pas utiliser un modèle pour créer un volume Cloud Volumes ONTAP sur un agrégat existant. Les nouveaux volumes sont créés dans un nouvel agrégat.
 

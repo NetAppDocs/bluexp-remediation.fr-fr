@@ -28,7 +28,7 @@ Pour commencer rapidement, suivez ces étapes ou faites défiler jusqu'aux secti
 
 
 [role="quick-margin-list"]
-* Si vous prévoyez d'ajouter une « action » de service cloud à votre modèle, par exemple https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["La sauvegarde dans le cloud"^] ou https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Sens des données cloud"^], assurez-vous que le service est actif et sous licence dans votre environnement.
+* Si vous prévoyez d'ajouter une « action » de service cloud à votre modèle, par exemple https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] ou https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^], assurez-vous que le service est actif et sous licence dans votre environnement.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Lancez le service modèles d'applications
@@ -46,12 +46,12 @@ Suivez les étapes de création et définissez les actions qui seront effectuée
 Lisez les informations suivantes pour vous assurer que votre configuration est prise en charge.
 
 * Si vous n'avez pas encore de connecteur, https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Voir comment créer des connecteurs"^] Pour AWS, Azure et GCP.
-* Lorsque vous créez un modèle de volume Cloud Volumes ONTAP, assurez-vous que vous disposez d'un environnement de travail Cloud Volumes ONTAP disponible pour vos utilisateurs. Découvrez comment lancer un système Cloud Volumes ONTAP dans https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS"^], https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Azure"^], ou dans https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html["GCP"^].
+* Lorsque vous créez un modèle de volume Cloud Volumes ONTAP, assurez-vous que vous disposez d'un environnement de travail Cloud Volumes ONTAP disponible pour vos utilisateurs. Découvrez comment lancer un système Cloud Volumes ONTAP dans https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWS"^], https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html["Azure"^], ou dans https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["GCP"^].
 * Lorsque vous créez un modèle de volume ONTAP sur site, veillez à disposer d'un environnement de travail ONTAP sur site. Découvrez comment https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["Découvrez un système ONTAP sur site"^] Dans BlueXP.
 * Lors de la création d'un modèle de volume Azure NetApp Files, assurez-vous que vous disposez d'un environnement de travail Azure NetApp Files disponible pour vos utilisateurs. Découvrez comment https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html["Créer un environnement de travail Azure NetApp Files"^] Dans BlueXP.
-* Si vous envisagez d'utiliser Cloud Backup pour sauvegarder un volume dans le modèle, vérifiez que votre environnement a activé Cloud Backup.
-* Si vous envisagez d'utiliser Cloud Data Sense pour analyser les volumes dans le modèle, assurez-vous que votre environnement a activé Cloud Data SENSE.
-* Si vous prévoyez d'activer la réplication dans le modèle et que le modèle concerne un volume ONTAP sur site, le cluster ONTAP doit disposer d'une licence SnapMirror active.
+* Si vous prévoyez d'utiliser la sauvegarde et la restauration BlueXP pour sauvegarder un volume dans le modèle, vérifiez que votre environnement a activé la sauvegarde et la restauration BlueXP.
+* Si vous prévoyez d'utiliser la classification BlueXP pour analyser les volumes dans le modèle, assurez-vous que votre environnement a activé la classification BlueXP.
+* Si vous prévoyez d'activer la réplication BlueXP dans le modèle et que le modèle concerne un volume ONTAP sur site, le cluster ONTAP doit disposer d'une licence SnapMirror active.
 
 
 
@@ -72,7 +72,7 @@ Pour cet exemple, nous allons créer un modèle nommé « volume CVO pour les ba
 +
 Définissez le volume pour l'environnement AWS, configurez-le avec 100 Go de stockage, définissez la règle Snapshot sur « par défaut » et activez l'efficacité du stockage.
 
-* Activation de Cloud Backup
+* Sauvegardez et restaurez vos données BlueXP
 +
 Créer 30 sauvegardes quotidiennes, 13 sauvegardes hebdomadaires et 3 sauvegardes mensuelles (à l'aide de la politique de rétention_ de _3 mois).
 
@@ -156,13 +156,13 @@ Voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-dat
 +
 Si les valeurs du modèle sont correctement complétées, une coche verte est ajoutée à la case « Créer un volume dans Cloud Volumes ONTAP ».
 
-. Cliquez sur la case *Activer la sauvegarde dans le Cloud sur le volume* et la boîte de dialogue _Activer la sauvegarde dans le Cloud sur le volume action Definition_ s'affiche pour vous permettre de compléter les détails de la sauvegarde dans le Cloud.
+. Cliquez sur la case *Activer Cloud Backup sur le volume* et la boîte de dialogue _Activer Cloud Backup sur la définition de l'action du volume_ s'affiche pour vous permettre de renseigner les détails de la sauvegarde et de la restauration BlueXP.
 +
 image:screenshot_create_template_add_action.png["Capture d'écran affichant des actions supplémentaires que vous pouvez ajouter au volume créé."]
 
 . Sélectionnez la stratégie de sauvegarde * 3 mois Retention* pour créer 30 sauvegardes quotidiennes, 13 hebdomadaires et 3 mois.
 . Sous les champs Environnement de travail et Nom du volume, trois sélections sont disponibles pour indiquer le volume sur lequel la sauvegarde est activée. Voir link:reference-template-building-blocks.html#pass-values-between-template-actions["comment remplir ces champs"].
-. Cliquez sur *appliquer* et la boîte de dialogue sauvegarde dans le cloud est enregistrée.
+. Cliquez sur *appliquer* pour enregistrer la boîte de dialogue de sauvegarde et de restauration BlueXP.
 . Entrez le nom du modèle *Volume CVO pour les bases de données* (pour cet exemple) dans le coin supérieur gauche.
 . Cliquez sur *Paramètres et dérive* pour fournir une description plus détaillée de sorte que ce modèle puisse être distingué d'autres modèles similaires, et vous pouvez ainsi activer dérive pour le modèle global, puis cliquez sur *appliquer*.
 +
@@ -282,7 +282,7 @@ Voir <<Que faire après avoir créé le modèle,ce que vous devez dire à vos ut
 
 === Créez un modèle pour un volume ONTAP sur site
 
-Voir https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-ontap.html#creating-volumes-for-ontap-clusters["Comment provisionner des volumes ONTAP sur site"^] Pour en savoir plus sur les paramètres à compléter dans le modèle de volume ONTAP sur site.
+Voir https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes["Comment provisionner des volumes ONTAP sur site"^] Pour en savoir plus sur les paramètres à compléter dans le modèle de volume ONTAP sur site.
 
 .Étapes
 . Sélectionnez *Santé > correction*, cliquez sur l'onglet *modèles* et cliquez sur *Ajouter un nouveau modèle*.
@@ -433,7 +433,7 @@ Certains champs de cette page sont explicites. Le tableau suivant décrit les ch
 
 | Étiquettes | Les étiquettes AWS sont des métadonnées pour vos ressources AWS. BlueXP ajoute les balises à l'instance Cloud Volumes ONTAP et à chaque ressource AWS associée à l'instance. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["Documentation AWS : balisage des ressources Amazon EC2"^]. 
 |===
-. *Localisation et connectivité* : saisissez les informations de réseau que vous avez enregistrées dans le https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-planning-your-config.html#aws-network-information-worksheet["Fiche AWS"^]. Il s'agit notamment de la région AWS, du VPC, du sous-réseau et du groupe de sécurité.
+. *Localisation et connectivité* : saisissez les informations de réseau que vous avez enregistrées dans le https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-planning-your-config.html#collect-networking-information["Fiche AWS"^]. Il s'agit notamment de la région AWS, du VPC, du sous-réseau et du groupe de sécurité.
 +
 Si vous disposez d'un poste externe AWS, vous pouvez déployer un système Cloud Volumes ONTAP à un seul nœud dans cet envoi en sélectionnant le VPC Outpost. L'expérience est la même que tout autre VPC qui réside dans AWS.
 
@@ -447,7 +447,7 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-
 
 . *Méthode de charge* : spécifiez l'option de charge que vous souhaitez utiliser avec ce système.
 +
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Découvrez ces méthodes de charge"^].
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html["Découvrez ces méthodes de charge"^].
 
 . *Compte sur le site de support NetApp* : sélectionnez un compte sur le site de support NetApp.
 . *Packages préconfigurés* : sélectionnez l'un des quatre packages préconfigurés qui déterminera plusieurs facteurs pour les volumes créés dans l'environnement de travail.
@@ -477,13 +477,13 @@ Voir <<Que faire après avoir créé le modèle,ce que vous devez dire à vos ut
 À l'aide de l'action _Find Existing Resources_, vous pouvez trouver des environnements de travail spécifiques ou trouver des volumes existants en fournissant une variété de filtres afin que vous puissiez limiter votre recherche aux ressources qui vous intéressent. Une fois les ressources correctes trouvent, vous pouvez ajouter des volumes à un environnement de travail ou activer un service cloud sur les volumes résultants.
 
 
-NOTE: Pour l'instant, des volumes sont disponibles dans les systèmes Cloud Volumes ONTAP, ONTAP sur site et Azure NetApp Files. Vous pouvez également activer Cloud Backup sur Cloud Volumes ONTAP et sur les volumes ONTAP sur site. D'autres ressources et services seront disponibles ultérieurement.
+NOTE: Pour l'instant, des volumes sont disponibles dans les systèmes Cloud Volumes ONTAP, ONTAP sur site et Azure NetApp Files. Vous pouvez également activer la sauvegarde et la restauration BlueXP sur Cloud Volumes ONTAP et les volumes ONTAP sur site. D'autres ressources et services seront disponibles ultérieurement.
 
 
 
 === Rechercher des volumes existants et activer un service cloud
 
-La fonctionnalité actuelle _Find Existing Resources_ action vous permet d'identifier les volumes dans les environnements de travail ONTAP sur site et Cloud Volumes ONTAP qui n'ont pas encore de fonction Cloud Backup ou Cloud Data Sense. Lorsque vous activez Cloud Backup sur des volumes spécifiques, cette action définit également la règle de sauvegarde que vous avez configurée comme règle par défaut pour cet environnement de travail. Ainsi, tous les volumes futurs de ces environnements de travail peuvent utiliser la même stratégie de sauvegarde.
+La fonctionnalité actuelle _Rechercher des ressources_ action vous permet de rechercher des volumes dans les environnements de travail Cloud Volumes ONTAP et ONTAP sur site dans lesquels la sauvegarde et la restauration BlueXP ou la classification BlueXP n'est pas activée pour le moment. Lorsque vous activez la sauvegarde et la restauration BlueXP sur des volumes spécifiques, cette action définit également la règle de sauvegarde que vous avez configurée comme règle par défaut pour cet environnement de travail. De cette façon, tous les volumes futurs de ces environnements de travail peuvent utiliser la même règle de sauvegarde.
 
 .Étapes
 . Sélectionnez *Santé > correction*, cliquez sur l'onglet *modèles* et cliquez sur *Ajouter un nouveau modèle*.
@@ -513,7 +513,7 @@ image:screenshot_define_find_resource_action1.png["Capture d'écran indiquant un
 Il s'agit de la seule entrée requise pour cette action. Cliquez sur *Continuer* maintenant et vous recevrez une liste de tous les volumes sur tous les systèmes Cloud Volumes ONTAP de votre environnement.
 
 +
-Nous vous recommandons plutôt de compléter quelques filtres afin de réduire le nombre de résultats (dans ce cas, les volumes) pour lesquels vous appliquerez l'action Cloud Backup.
+Il est recommandé de remplir quelques filtres afin de réduire le nombre de résultats (dans ce cas, les volumes) sur lesquels vous appliquerez l'action de sauvegarde et de restauration BlueXP.
 
 . Dans la zone _context_, vous pouvez sélectionner un environnement de travail spécifique et d'autres détails sur cet environnement de travail.
 +
@@ -550,7 +550,7 @@ L'action _Find Existing Resources_ terminée s'affiche dans la fenêtre de l'éd
 L'action _Activer la sauvegarde dans le Cloud sur le volume_ est ajoutée à la fenêtre.
 
 +
-image:screenshot_template_add_backup_action.png["Capture d'écran indiquant les étapes à suivre pour ajouter une action Cloud Backup à votre modèle."]
+image:screenshot_template_add_backup_action.png["Copie d'écran montrant les étapes d'ajout d'une action de sauvegarde et de restauration BlueXP à votre modèle."]
 
 . Vous pouvez maintenant définir les critères de sauvegarde comme décrit dans <<Ajouter la fonctionnalité de sauvegarde à un volume,Ajout de la fonctionnalité de sauvegarde à un volume>> De sorte que le modèle applique la stratégie de sauvegarde correcte aux volumes que vous sélectionnez à partir de l'action _Find Existing Resources_.
 . Cliquez sur *appliquer* pour enregistrer la personnalisation que vous avez effectuée dans l'action de sauvegarde, puis cliquez sur *Enregistrer le modèle* lorsque vous avez terminé.
@@ -611,13 +611,13 @@ Voir <<Que faire après avoir créé le modèle,ce que vous devez dire à vos ut
 
 == Exemples d'activation de services à l'aide de modèles
 
-Les modèles de service vous permettent d'activer les services Cloud Backup, Cloud Data Sense ou Replication (SnapMirror) sur un nouveau volume.
+Avec les modèles de services, vous pouvez activer les services de sauvegarde et de restauration BlueXP, de classification BlueXP ou de réplication (SnapMirror) sur un nouveau volume créé.
 
 
 
 === Ajouter la fonctionnalité de sauvegarde à un volume
 
-Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous souhaitez créer régulièrement des sauvegardes du volume à l'aide de https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["La sauvegarde dans le cloud"^] services.
+Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous souhaitez créer régulièrement des sauvegardes du volume à l'aide de https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] services.
 
 
 TIP: Cette action ne s'applique pas aux volumes Azure NetApp Files.
@@ -634,9 +634,9 @@ Si vous souhaitez créer des sauvegardes pour un autre volume, vous pouvez entre
 
 
 
-=== Ajouter une fonctionnalité de détection des données à un volume
+=== Ajoutez la fonctionnalité de classification BlueXP à un volume
 
-Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous voulez analyser le volume pour vérifier la conformité et la classification à l'aide du https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Sens des données cloud"^] services.
+Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous voulez analyser le volume pour vérifier la conformité et la classification à l'aide du https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^] services.
 
 image:screenshot_template_data_sense.png["Capture d'écran de la page pour activer la fonctionnalité de numérisation de vos volumes."]
 
@@ -649,25 +649,25 @@ Si vous souhaitez analyser des données pour un autre volume, vous pouvez saisir
 
 
 
-=== Ajouter la fonctionnalité de réplication à un volume
+=== Ajoutez la fonctionnalité de réplication BlueXP à un volume
 
-Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle de réplication des données du volume vers un autre volume à l'aide de l' https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication"^] services. Vous pouvez répliquer des données vers un cluster Cloud Volumes ONTAP ou vers un cluster ONTAP sur site.
+Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle de réplication des données du volume vers un autre volume à l'aide de l' https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication BlueXP"^] services. Vous pouvez répliquer des données vers un cluster Cloud Volumes ONTAP ou vers un cluster ONTAP sur site.
 
 
 TIP: Cette action ne s'applique pas aux volumes Azure NetApp Files.
 
-La fonction de réplication se compose de trois parties : la sélection du volume source, la sélection du volume de destination et la définition des paramètres de réplication. Chaque section est décrite ci-dessous.
+La fonctionnalité de réplication BlueXP se compose de trois parties : la sélection du volume source, la sélection du volume de destination et la définition des paramètres de réplication. Chaque section est décrite ci-dessous.
 
 . *Détails de la source* : saisissez les détails du volume source que vous souhaitez répliquer :
 +
-image:screenshot_template_replication_source.png["Capture d'écran de la page pour définir l'emplacement du volume source de réplication."]
+image:screenshot_template_replication_source.png["Capture d'écran de la page pour définir l'emplacement du volume source de réplication BlueXP."]
 
 +
 .. Par défaut, les trois premières variables sont remplies pour l'environnement de travail, la machine virtuelle de stockage et le volume afin de indiquer que vous allez répliquer le volume créé précédemment dans ce même modèle. Donc, si c'est ce que vous voulez faire, vous êtes tous ensemble.
 +
 Si vous souhaitez répliquer un autre volume, vous pouvez saisir ces informations manuellement. Découvrez comment link:reference-template-building-blocks.html#pass-values-between-template-actions["Renseignez les champs de contexte"] pour indiquer un autre volume.
 
-.. La réplication nécessite que les environnements de travail source et destination soient connectés via leurs LIFs intercluster. Entrer l'adresse IP LIF intercluster pour l'environnement de travail source.
+.. La réplication BlueXP nécessite que les environnements de travail source et de destination soient connectés via leurs LIF intercluster. Entrer l'adresse IP LIF intercluster pour l'environnement de travail source.
 +
 Pour obtenir ces informations : double-cliquez sur l'environnement de travail, cliquez sur l'icône du menu, puis cliquez sur informations.
 
@@ -675,7 +675,7 @@ Pour obtenir ces informations : double-cliquez sur l'environnement de travail, c
 
 . *Détails de destination* : saisissez les détails du volume de destination qui sera créé par l'opération de réplication :
 +
-image:screenshot_template_replication_dest.png["Capture d'écran de la page pour définir l'emplacement du volume de destination de réplication."]
+image:screenshot_template_replication_dest.png["Capture d'écran de la page pour définir l'emplacement du volume de destination de la réplication BlueXP."]
 
 +
 .. Sélectionnez l'environnement de travail dans lequel le volume sera créé.
@@ -683,14 +683,14 @@ image:screenshot_template_replication_dest.png["Capture d'écran de la page pour
 .. Lors de la réplication d'un volume vers un cluster Cloud Volumes ONTAP (pas vers un cluster ONTAP sur site), vous devez spécifier le fournisseur de destination (AWS, Azure ou GCP).
 .. Lors de la réplication d'un volume sur un cluster Cloud Volumes ONTAP, vous pouvez spécifier si le Tiering des volumes est activé sur le volume de destination.
 .. Pour le nom du volume de destination, cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer un nom en sélectionnant *texte libre*, ou vous pouvez spécifier que le nom du volume doit avoir un préfixe ou un suffixe spécifique, qu'il _contient_ certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.
-.. La réplication nécessite que les environnements de travail source et destination soient connectés via leurs LIFs intercluster. Entrer l'adresse IP LIF intercluster pour l'environnement de travail de destination.
+.. La réplication BlueXP nécessite que les environnements de travail source et de destination soient connectés via leurs LIF intercluster. Entrer l'adresse IP LIF intercluster pour l'environnement de travail de destination.
 .. Sélectionnez l'agrégat sur lequel le volume va résider.
 .. Lors de la réplication d'un volume dans un cluster Cloud Volumes ONTAP (pas vers un cluster ONTAP sur site), vous devez spécifier le type de disque à utiliser pour le nouveau volume.
 
 
 . *Détails de la réplication* : saisissez les détails sur le type et la fréquence de l'opération de réplication :
 +
-image:screenshot_template_replication_policy.png["Capture d'écran de la page pour définir les paramètres de réplication de la relation."]
+image:screenshot_template_replication_policy.png["Capture d'écran de la page pour définir les paramètres de réplication BlueXP pour la relation."]
 
 +
 .. Sélectionner https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html#types-of-replication-policies["règle de réplication"^] que vous voulez utiliser.

@@ -57,18 +57,18 @@ Par exemple, si vous entrez « ^[a-ZA-Z][0-9a-ZA-Z_]{0,149}$ » comme regex pour
 
 == Transmettre des valeurs entre les actions de modèle
 
-Les modèles peuvent utiliser les informations d'une action précédente pour remplir un champ dans une action ultérieure. Par exemple, lorsque vous définissez le nom du volume sur lequel la fonctionnalité sauvegarde dans le cloud est activée, vous pouvez demander à l'action sauvegarde d'utiliser la valeur que l'administrateur du stockage a saisie comme nom du volume à partir de l'action Créer une Cloud Volumes ONTAP.
+Les modèles peuvent utiliser les informations d'une action précédente pour remplir un champ dans une action ultérieure. Par exemple, lorsque vous définissez le nom du volume sur lequel la fonctionnalité de sauvegarde et de restauration BlueXP est activée, vous pouvez demander à l'action de sauvegarde d'utiliser la valeur saisie par l'administrateur du stockage comme nom du volume à partir de l'action de création de Cloud Volumes ONTAP.
 
-Il existe trois types d'informations que le service AppTemplate peut utiliser :
+Le service de correction BlueXP peut utiliser trois types d'informations :
 
 * Valeur d'entrée - il s'agit de la valeur réelle que l'administrateur de stockage a saisie dans un champ d'une action de modèle précédente.
 * Valeur de sortie : valeur générée par BlueXP après la création d'une ressource à partir d'une action de modèle précédente.
 * Entrez votre propre valeur - il s'agit d'une valeur que vous saisissez ; elle n'est pas accessible à partir d'une action précédente dans le modèle.
 
 
-Par exemple, pour activer l'analyse de conformité sur un volume, le service Cloud Data SENSE a besoin à la fois du « nom de volume » saisi par l'administrateur du stockage (valeur d'entrée) et de l'UUID du volume généré par BlueXP lors de la création du volume (valeur de sortie).
+Par exemple, pour activer l'analyse de conformité sur un volume, le service de classification BlueXP requiert à la fois le « nom du volume » saisi par l'administrateur du stockage (valeur d'entrée) et le « UUID du volume » généré par BlueXP lors de la création du volume (valeur de sortie).
 
-L'illustration suivante montre comment saisir ces informations dans la section « Cloud Data Sense » du modèle.
+L'illustration suivante montre comment saisir ces informations dans la section d'action de classification BlueXP du modèle.
 
 image:screenshot_template_variable_input_output.png["Illustration montrant comment utiliser une valeur saisie dans une action précédente pour remplir un champ dans une autre action."]
 
@@ -80,9 +80,9 @@ Conditions indique au modèle d'exécuter différentes actions selon que la cond
 
 image:screenshot_template_select_condition.png["Capture d'écran indiquant comment ajouter des instructions conditionnelles à vos modèles."]
 
-Par exemple, vous pouvez indiquer que si un volume a une capacité supérieure à 50 Go, Cloud Backup doit être activé sur ce volume. Si la capacité du volume est inférieure, Cloud Backup n'est pas activé. Vous pouvez implémenter cette fonction dans votre modèle comme indiqué ci-dessous.
+Par exemple, vous pouvez indiquer que si un volume a une capacité supérieure à 50 Go, la sauvegarde et la restauration BlueXP doivent être activées sur ce volume. Si la capacité du volume est inférieure, la sauvegarde et la restauration BlueXP ne sont pas activées. Vous pouvez implémenter cette fonction dans votre modèle comme indiqué ci-dessous.
 
-image:screenshot_template_condition_example.png["Capture d'écran montrant comment les conditions peuvent être utilisées dans votre modèle pour activer Cloud Backup de façon conditionnelle."]
+image:screenshot_template_condition_example.png["Capture d'écran montrant comment les conditions peuvent être utilisées dans votre modèle pour activer de manière conditionnelle la sauvegarde et la restauration BlueXP."]
 
 Les conditions sont composées de deux parties :
 

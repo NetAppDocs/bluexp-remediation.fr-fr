@@ -1,6 +1,6 @@
 ---
 settings:
-  name: AppTemplate
+  name: BlueXP remediation
   platform: cloud
   internal:
     pdf_enabled: true
@@ -11,17 +11,17 @@ settings:
   langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es
 sidebar:
   entries:
-  - title: Docs de modèle d'application
+  - title: Documents de correction BlueXP
     url: "/index.html"
   - title: Notes de mise à jour
     url: "/whats-new.html"
   - title: Commencez
     entries:
-    - title: En savoir plus sur AppTemplate
+    - title: Découvrez la résolution des problèmes BlueXP
       url: "/concept-resource-templates.html"
     - title: En savoir plus sur le balisage
       url: "/concept-tagging.html"
-  - title: Utiliser AppTemplate
+  - title: Utilisez la correction BlueXP
     entries:
     - title: Utilisez des modèles pour standardiser la création de ressources
       entries:
@@ -51,7 +51,7 @@ homepage:
   tiles:
   - title: Commencez
     links:
-    - title: En savoir plus sur AppTemplate
+    - title: Découvrez la résolution des problèmes BlueXP
       url: concept-resource-templates.html
     - title: En savoir plus sur le balisage
       url: concept-tagging.html
@@ -67,8 +67,8 @@ homepage:
       url: task-define-templates.html#create-a-template-for-an-azure-netapp-files-volume
     - title: Volume ONTAP sur site
       url: task-define-templates.html#create-a-template-for-an-on-premises-ontap-volume
-    - title: Ajouter une fonctionnalité de sauvegarde, de détection de données ou
-        de réplication à un volume
+    - title: Ajoutez des fonctionnalités de sauvegarde, de classification ou de réplication
+        à un volume
       url: task-define-templates.html#examples-of-enabling-services-using-templates
   - title: Créez des ressources à l'aide de modèles
     links:
@@ -87,11 +87,11 @@ homepage:
   - title: Communauté sur les blogs
     links:
     - title: Communauté NetApp
-      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
     - title: Blog BlueXP
-      url: https://cloud.netapp.com/blog
+      url: https://bluexp.netapp.com/blog
     - title: Webinaires sur le cloud
-      url: https://cloud.netapp.com/events
+      url: https://bluexp.netapp.com/events
 product-family:
   name: BlueXP
   repo: cloud-manager-family

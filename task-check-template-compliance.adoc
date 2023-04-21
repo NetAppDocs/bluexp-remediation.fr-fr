@@ -34,7 +34,7 @@ image:screenshot_template_drift_on_template.png["Capture d'écran indiquant comm
 
 . Les administrateurs du stockage exécutent le modèle pour créer des volumes.
 . Par la suite, un administrateur du stockage modifie un volume et désactive les copies Snapshot.
-. Vous exécutez la vérification de dérive sur tous les modèles et le service AppTemplates compare le paramètre du modèle de copies Snapshot au paramètre actuel du volume. Toutes les valeurs non conformes sont signalées pour vous permettre de corriger le paramètre incorrect.
+. Vous exécutez une vérification des écarts sur tous les modèles et le service de correction BlueXP compare le paramètre du modèle de copies Snapshot au paramètre actuel du volume. Toutes les valeurs non conformes sont signalées pour vous permettre de corriger le paramètre incorrect.
 
 
 
@@ -43,7 +43,7 @@ image:screenshot_template_drift_on_template.png["Capture d'écran indiquant comm
 
 Le tableau de bord de dérive affiche le nombre total de ressources (par exemple, les volumes) créées à l'aide de vos modèles, le nombre qui est toujours conforme au modèle, le numéro qui n'est pas conforme (dérivé) et le numéro qui a été créé avec la fonction dérive désactivée.
 
-image:screenshot_template_drift_dashboard.png["Capture d'écran du tableau de bord de dérive pour le service AppTemplates."]
+image:screenshot_template_drift_dashboard.png["Copie d'écran du tableau de bord de dérive pour le service de correction BlueXP."]
 
 * Les commandes situées en haut de chaque colonne vous permettent de trier les résultats par ordre numérique ou alphabétique.
 * Le image:screenshot_plus_icon.gif[""] Vous permet de filtrer les résultats par nom de modèle, stratégie d'dérive et état et type d'action. Par exemple :
@@ -85,9 +85,9 @@ Pour afficher un rapport de dérive pour les ressources créées à partir de vo
 
 
 
-=== Détails sur l'intégrité de la réplication dans le rapport de dérive
+=== Informations sur l'état de la réplication BlueXP dans le rapport de dérive
 
-Quand link:task-define-templates.html#add-replication-functionality-to-a-volume["Activation de la réplication sur un volume à l'aide de modèles"], Vous pouvez choisir d'afficher des informations de réplication plus détaillées dans le rapport de dérive en activant la dérive dans le champ « Activer la surveillance de l'intégrité de la réplication ». Lorsque cette option est activée, le rapport indique si l'état de santé de la relation de réplication est sain ou non (dérivé), avec la durée du décalage SnapMirror, l'état et la durée du dernier transfert.
+Quand link:task-define-templates.html#add-replication-functionality-to-a-volume["Activation de la réplication BlueXP sur un volume à l'aide de modèles"], Vous pouvez choisir d'afficher des informations de réplication plus détaillées dans le rapport de dérive en activant la dérive dans le champ « Activer la surveillance de l'intégrité de la réplication ». Lorsqu'il est activé, le rapport de dérive indique si l'état de santé de la relation de réplication BlueXP est sain ou non (dérivé), ainsi que le délai de décalage SnapMirror, l'état et la durée du dernier transfert.
 
 Cette capture d'écran montre les détails de réplication d'une relation SnapMirror qui n'est pas intègre dans le rapport de dérive.
 
