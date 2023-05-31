@@ -49,9 +49,9 @@ Un modèle est une chaîne d'actions qui ont des valeurs prédéfinies. Vous pou
 
 *Actions de services :*
 
-* Activer https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] Sur les volumes (non applicable à Azure NetApp Files)
-* Activer https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^] sur les volumes
-* Activer https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication BlueXP"^] Sur les volumes (non applicable à Azure NetApp Files)
+* Activer https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] Sur les volumes (non applicable à Azure NetApp Files)
+* Activer https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classification BlueXP"^] sur les volumes
+* Activer https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html["La réplication BlueXP"^] Sur les volumes (non applicable à Azure NetApp Files)
 
 
 Par exemple, vous pouvez créer un modèle qui crée un volume Cloud Volumes ONTAP. Ou qui crée un volume Cloud Volumes ONTAP, puis active la sauvegarde et la restauration BlueXP sur ce volume. Ou qui crée un volume Cloud Volumes ONTAP, puis active la classification BlueXP Backup and Recovery _and_ BlueXP sur ce volume.

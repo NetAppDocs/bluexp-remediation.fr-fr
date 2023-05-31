@@ -28,7 +28,7 @@ Pour commencer rapidement, suivez ces étapes ou faites défiler jusqu'aux secti
 
 
 [role="quick-margin-list"]
-* Si vous prévoyez d'ajouter une « action » de service cloud à votre modèle, par exemple https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] ou https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^], assurez-vous que le service est actif et sous licence dans votre environnement.
+* Si vous prévoyez d'ajouter une « action » de service cloud à votre modèle, par exemple https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] ou https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classification BlueXP"^], assurez-vous que le service est actif et sous licence dans votre environnement.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Lancez le service modèles d'applications
@@ -45,10 +45,10 @@ Suivez les étapes de création et définissez les actions qui seront effectuée
 
 Lisez les informations suivantes pour vous assurer que votre configuration est prise en charge.
 
-* Si vous n'avez pas encore de connecteur, https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Voir comment créer des connecteurs"^] Pour AWS, Azure et GCP.
-* Lorsque vous créez un modèle de volume Cloud Volumes ONTAP, assurez-vous que vous disposez d'un environnement de travail Cloud Volumes ONTAP disponible pour vos utilisateurs. Découvrez comment lancer un système Cloud Volumes ONTAP dans https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWS"^], https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html["Azure"^], ou dans https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["GCP"^].
-* Lorsque vous créez un modèle de volume ONTAP sur site, veillez à disposer d'un environnement de travail ONTAP sur site. Découvrez comment https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["Découvrez un système ONTAP sur site"^] Dans BlueXP.
-* Lors de la création d'un modèle de volume Azure NetApp Files, assurez-vous que vous disposez d'un environnement de travail Azure NetApp Files disponible pour vos utilisateurs. Découvrez comment https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-quick-start.html["Créer un environnement de travail Azure NetApp Files"^] Dans BlueXP.
+* Si vous n'avez pas encore de connecteur, https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Voir comment créer des connecteurs"^] Pour AWS, Azure et GCP.
+* Lorsque vous créez un modèle de volume Cloud Volumes ONTAP, assurez-vous que vous disposez d'un environnement de travail Cloud Volumes ONTAP disponible pour vos utilisateurs. Découvrez comment lancer un système Cloud Volumes ONTAP dans https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws.html["AWS"^], https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-azure.html["Azure"^], ou dans https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-gcp.html["GCP"^].
+* Lorsque vous créez un modèle de volume ONTAP sur site, veillez à disposer d'un environnement de travail ONTAP sur site. Découvrez comment https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Découvrez un système ONTAP sur site"^] Dans BlueXP.
+* Lors de la création d'un modèle de volume Azure NetApp Files, assurez-vous que vous disposez d'un environnement de travail Azure NetApp Files disponible pour vos utilisateurs. Découvrez comment https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["Créer un environnement de travail Azure NetApp Files"^] Dans BlueXP.
 * Si vous prévoyez d'utiliser la sauvegarde et la restauration BlueXP pour sauvegarder un volume dans le modèle, vérifiez que votre environnement a activé la sauvegarde et la restauration BlueXP.
 * Si vous prévoyez d'utiliser la classification BlueXP pour analyser les volumes dans le modèle, assurez-vous que votre environnement a activé la classification BlueXP.
 * Si vous prévoyez d'activer la réplication BlueXP dans le modèle et que le modèle concerne un volume ONTAP sur site, le cluster ONTAP doit disposer d'une licence SnapMirror active.
@@ -64,7 +64,7 @@ Les modèles de ressources vous permettent de créer de nouveaux volumes ou un n
 
 === Créez un modèle pour un volume Cloud Volumes ONTAP
 
-Voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html["Provisionnement de volumes Cloud Volumes ONTAP"^] Pour plus d'informations sur les paramètres à compléter dans le modèle de volume Cloud Volumes ONTAP.
+Voir https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-create-volumes.html["Provisionnement de volumes Cloud Volumes ONTAP"^] Pour plus d'informations sur les paramètres à compléter dans le modèle de volume Cloud Volumes ONTAP.
 
 Pour cet exemple, nous allons créer un modèle nommé « volume CVO pour les bases de données » et inclure les 2 actions suivantes :
 
@@ -150,7 +150,7 @@ Lorsque les utilisateurs lancent le modèle à partir du tableau de bord modèle
 |===
 . *Tiering:* Choisissez la règle de Tiering que vous souhaitez appliquer au volume, ou définissez cette règle sur « aucun » si vous ne souhaitez pas transférer les données inactives de ce volume vers le stockage objet.
 +
-Voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html#volume-tiering-policies["règles de tiering des volumes"^] pour une vue d'ensemble, et voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-tiering.html["Tiering des données inactives vers le stockage objet"^] afin d'être certain que votre environnement est configuré pour le tiering.
+Voir https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html#volume-tiering-policies["règles de tiering des volumes"^] pour une vue d'ensemble, et voir https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html["Tiering des données inactives vers le stockage objet"^] afin d'être certain que votre environnement est configuré pour le tiering.
 
 . Cliquez sur *appliquer* après avoir défini les paramètres requis pour cette action.
 +
@@ -182,7 +182,7 @@ Voir <<Que faire après avoir créé le modèle,ce que vous devez dire à vos ut
 
 La création d'un modèle pour un volume Azure NetApp Files se fait de la même manière que la création d'un modèle pour un volume Cloud Volumes ONTAP.
 
-Voir https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes["Provisionnement de volumes Azure NetApp Files"^] Pour plus d'informations sur tous les paramètres à compléter dans le modèle de volume ANF.
+Voir https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-volumes.html#create-volumes["Provisionnement de volumes Azure NetApp Files"^] Pour plus d'informations sur tous les paramètres à compléter dans le modèle de volume ANF.
 
 .Étapes
 . Sélectionnez *Santé > correction*, cliquez sur l'onglet *modèles* et cliquez sur *Ajouter un nouveau modèle*.
@@ -282,7 +282,7 @@ Voir <<Que faire après avoir créé le modèle,ce que vous devez dire à vos ut
 
 === Créez un modèle pour un volume ONTAP sur site
 
-Voir https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes["Comment provisionner des volumes ONTAP sur site"^] Pour en savoir plus sur les paramètres à compléter dans le modèle de volume ONTAP sur site.
+Voir https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-manage-ontap-connector.html#create-volumes["Comment provisionner des volumes ONTAP sur site"^] Pour en savoir plus sur les paramètres à compléter dans le modèle de volume ONTAP sur site.
 
 .Étapes
 . Sélectionnez *Santé > correction*, cliquez sur l'onglet *modèles* et cliquez sur *Ajouter un nouveau modèle*.
@@ -390,7 +390,7 @@ Vous pouvez créer un environnement de travail Cloud Volumes ONTAP à un seul n�
 
 
 ====
-Voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html#launching-a-single-node-cloud-volumes-ontap-system-in-aws["Comment lancer un système Cloud Volumes ONTAP à un seul nœud dans AWS"^] ou un https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html#launching-a-cloud-volumes-ontap-ha-pair-in-aws["Paire HA Cloud Volumes ONTAP dans AWS"^] pour les prérequis qui doivent être en place et pour obtenir des détails sur tous les paramètres que vous devrez définir dans ce modèle.
+Voir https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html#launching-a-single-node-cloud-volumes-ontap-system-in-aws["Comment lancer un système Cloud Volumes ONTAP à un seul nœud dans AWS"^] ou un https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html#launching-a-cloud-volumes-ontap-ha-pair-in-aws["Paire HA Cloud Volumes ONTAP dans AWS"^] pour les prérequis qui doivent être en place et pour obtenir des détails sur tous les paramètres que vous devrez définir dans ce modèle.
 
 .Étapes
 . Sélectionnez *Santé > correction*, cliquez sur l'onglet *modèles* et cliquez sur *Ajouter un nouveau modèle*.
@@ -433,7 +433,7 @@ Certains champs de cette page sont explicites. Le tableau suivant décrit les ch
 
 | Étiquettes | Les étiquettes AWS sont des métadonnées pour vos ressources AWS. BlueXP ajoute les balises à l'instance Cloud Volumes ONTAP et à chaque ressource AWS associée à l'instance. Pour plus d'informations sur les étiquettes, reportez-vous à la section https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["Documentation AWS : balisage des ressources Amazon EC2"^]. 
 |===
-. *Localisation et connectivité* : saisissez les informations de réseau que vous avez enregistrées dans le https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-planning-your-config.html#collect-networking-information["Fiche AWS"^]. Il s'agit notamment de la région AWS, du VPC, du sous-réseau et du groupe de sécurité.
+. *Localisation et connectivité* : saisissez les informations de réseau que vous avez enregistrées dans le https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config.html#collect-networking-information["Fiche AWS"^]. Il s'agit notamment de la région AWS, du VPC, du sous-réseau et du groupe de sécurité.
 +
 Si vous disposez d'un poste externe AWS, vous pouvez déployer un système Cloud Volumes ONTAP à un seul nœud dans cet envoi en sélectionnant le VPC Outpost. L'expérience est la même que tout autre VPC qui réside dans AWS.
 
@@ -443,11 +443,11 @@ Si vous disposez d'un poste externe AWS, vous pouvez déployer un système Cloud
 Pour le chiffrement géré par AWS, vous pouvez choisir une autre clé maître client (CMK) dans votre compte ou un autre compte AWS.
 
 +
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html["Découvrez comment configurer le KMS AWS pour Cloud Volumes ONTAP"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-setting-up-kms.html["Découvrez comment configurer le KMS AWS pour Cloud Volumes ONTAP"^].
 
 . *Méthode de charge* : spécifiez l'option de charge que vous souhaitez utiliser avec ce système.
 +
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html["Découvrez ces méthodes de charge"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-licensing-aws.html["Découvrez ces méthodes de charge"^].
 
 . *Compte sur le site de support NetApp* : sélectionnez un compte sur le site de support NetApp.
 . *Packages préconfigurés* : sélectionnez l'un des quatre packages préconfigurés qui déterminera plusieurs facteurs pour les volumes créés dans l'environnement de travail.
@@ -617,7 +617,7 @@ Avec les modèles de services, vous pouvez activer les services de sauvegarde et
 
 === Ajouter la fonctionnalité de sauvegarde à un volume
 
-Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous souhaitez créer régulièrement des sauvegardes du volume à l'aide de https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] services.
+Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous souhaitez créer régulièrement des sauvegardes du volume à l'aide de https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Sauvegarde et restauration BlueXP"^] services.
 
 
 TIP: Cette action ne s'applique pas aux volumes Azure NetApp Files.
@@ -636,7 +636,7 @@ Si vous souhaitez créer des sauvegardes pour un autre volume, vous pouvez entre
 
 === Ajoutez la fonctionnalité de classification BlueXP à un volume
 
-Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous voulez analyser le volume pour vérifier la conformité et la classification à l'aide du https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Classification BlueXP"^] services.
+Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous voulez analyser le volume pour vérifier la conformité et la classification à l'aide du https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Classification BlueXP"^] services.
 
 image:screenshot_template_data_sense.png["Capture d'écran de la page pour activer la fonctionnalité de numérisation de vos volumes."]
 
@@ -651,7 +651,7 @@ Si vous souhaitez analyser des données pour un autre volume, vous pouvez saisir
 
 === Ajoutez la fonctionnalité de réplication BlueXP à un volume
 
-Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle de réplication des données du volume vers un autre volume à l'aide de l' https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["La réplication BlueXP"^] services. Vous pouvez répliquer des données vers un cluster Cloud Volumes ONTAP ou vers un cluster ONTAP sur site.
+Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle de réplication des données du volume vers un autre volume à l'aide de l' https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html["La réplication BlueXP"^] services. Vous pouvez répliquer des données vers un cluster Cloud Volumes ONTAP ou vers un cluster ONTAP sur site.
 
 
 TIP: Cette action ne s'applique pas aux volumes Azure NetApp Files.
@@ -693,7 +693,7 @@ image:screenshot_template_replication_dest.png["Capture d'écran de la page pour
 image:screenshot_template_replication_policy.png["Capture d'écran de la page pour définir les paramètres de réplication BlueXP pour la relation."]
 
 +
-.. Sélectionner https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html#types-of-replication-policies["règle de réplication"^] que vous voulez utiliser.
+.. Sélectionner https://docs.netapp.com/us-en/bluexp-replication/concept-replication-policies.html#types-of-replication-policies["règle de réplication"^] que vous voulez utiliser.
 .. Choisissez une copie unique ou une planification de réplication récurrente.
 .. Activez la surveillance de l'état de la réplication si vous souhaitez que le rapport de dérive inclut l'intégrité de la réplication de la relation SnapMirror ainsi que l'heure de décalage, l'état et l'heure du dernier transfert. link:task-check-template-compliance.html#bluexp-replication-health-details-in-the-drift-report["Voyez ce que cela ressemble dans le rapport de dérive"].
 .. Indiquez si vous souhaitez définir une limite de taux de transfert, puis saisissez le taux maximal (en kilo-octets par seconde) auquel les données peuvent être transférées. Vous pouvez entrer une valeur fixe ou fournir un minimum et un maximum et laisser l'administrateur du stockage sélectionner une valeur dans cette plage.
