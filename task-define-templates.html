@@ -1,0 +1,2382 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head class="at-element-marker">
+  <title>Création de modèles d'application pour votre organisation | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Création de modèles d'application pour votre organisation | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/fr-fr/bluexp-remediation/task-define-templates.html" />
+	<meta property="og:description" content="Sélectionnez une ou plusieurs des « actions » fournies par NetApp et créez rapidement un modèle d"application que votre entreprise peut utiliser pour commenc..." />
+  <meta property="og:image" content="https://docs.netapp.com/fr-fr/bluexp-remediation/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Sélectionnez une ou plusieurs des « actions » fournies par NetApp et créez rapidement un modèle d"application que votre entreprise peut utiliser pour commenc...">
+  <meta name="keywords" content=" templates, resource templates, services templates, volume templates, cvo working environment template, find volumes"><!-- Icons -->
+  <link rel="icon" href="/fr-fr/bluexp-remediation/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/fr-fr/bluexp-remediation/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/fr-fr/bluexp-remediation/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/fr-fr/bluexp-remediation/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/fr-fr/bluexp-remediation/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/fr-fr/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/bluexp-remediation/task-define-templates.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/bluexp-remediation/task-define-templates.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/fr-fr/bluexp-remediation/js/na-search.js'></script><script src='/fr-fr/bluexp-remediation/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/fr-fr/bluexp-remediation/js/custom-dropdown.js'></script>
+  <script src='/fr-fr/bluexp-remediation/js/FileSaver.min.js'></script>
+  <script src='/fr-fr/bluexp-remediation/js/jszip-utils.min.js'></script>
+  <script src='/fr-fr/bluexp-remediation/js/jszip.min.js'></script><script src='/fr-fr/bluexp-remediation/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/fr-fr/bluexp-remediation/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/fr">
+                <image id="ie-header-logo" src="/fr-fr/bluexp-remediation/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/fr/support-and-training/documentation/">Documents</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/fr-fr/bluexp-remediation/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">Français</span>
+                    <img src="/fr-fr/bluexp-remediation/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/fr-fr/bluexp-remediation/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/fr-fr/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/bluexp-remediation/task-define-templates.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/fr-fr/bluexp-remediation/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">Tout NetApp</span>
+                    <img src="/fr-fr/bluexp-remediation/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/fr-fr/bluexp-remediation/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/fr/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Support</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Base de connaissances</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/fr/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Formation</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/fr-fr/bluexp-remediation/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/fr-fr/bluexp-remediation/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">Tous les documents</a>
+    </li>
+    
+    
+    <li class="">
+      <a href="https://docs.netapp.com/us-en/cloud/">Documents sur le cloud</a>
+    </li>
+    
+
+    
+    <li class="">
+      <a href="https://docs.netapp.com/fr-fr/bluexp-family/">
+        BlueXP
+      </a>
+    </li>
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/fr-fr/bluexp-remediation/">-->
+      BlueXP remediation
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/fr-fr/bluexp-remediation/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/fr-fr/bluexp-remediation/search.html" 
+        data-type="widget"
+        data-placeholder="Rechercher dans la documentation"
+        data-no-results-found="Aucun résultat trouvé pour : {query}"
+        data-did-you-mean="Rechercher {suggestion}."
+        data-no-results-found-did-you-mean="Aucun résultat n'a été trouvé pour {query}. Voulez-vous dire {suggestion} ?"
+        data-results-found="{hitCount} résultats"
+        data-error-message="Une erreur s'est produite. Merci de réessayer."
+        data-error-reset="Réinitialiser la recherche"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documents de correction BlueXP"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/fr-fr/bluexp-remediation/index.html">
+        Documents de correction BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Notes de mise à jour"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/whats-new.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/fr-fr/bluexp-remediation/whats-new.html">
+        Notes de mise à jour
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Commencez"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/fr-fr/bluexp-remediation/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/fr-fr/bluexp-remediation/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Commencez</div>-->
+         Commencez
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Découvrez la résolution des problèmes BlueXP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/concept-resource-templates.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/fr-fr/bluexp-remediation/concept-resource-templates.html">
+        Découvrez la résolution des problèmes BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="En savoir plus sur le balisage"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/concept-tagging.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/fr-fr/bluexp-remediation/concept-tagging.html">
+        En savoir plus sur le balisage
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilisez la correction BlueXP"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/fr-fr/bluexp-remediation/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/fr-fr/bluexp-remediation/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Utilisez la correction BlueXP</div>-->
+         Utilisez la correction BlueXP
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilisez des modèles pour standardiser la création de ressources"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/fr-fr/bluexp-remediation/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/fr-fr/bluexp-remediation/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Utilisez des modèles pour standardiser la création de ressources</div>-->
+         Utilisez des modèles pour standardiser la création de ressources
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Créez des modèles pour votre entreprise"
+      data-li-level="3#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/task-define-templates.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/fr-fr/bluexp-remediation/task-define-templates.html">
+        Créez des modèles pour votre entreprise
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Vérifier les ressources pour la conformité des modèles"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/task-check-template-compliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/fr-fr/bluexp-remediation/task-check-template-compliance.html">
+        Vérifier les ressources pour la conformité des modèles
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Exécutez des modèles pour créer des ressources"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/task-run-templates.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/fr-fr/bluexp-remediation/task-run-templates.html">
+        Exécutez des modèles pour créer des ressources
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Organisez vos ressources à l'aide de balises"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/fr-fr/bluexp-remediation/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/fr-fr/bluexp-remediation/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Organisez vos ressources à l'aide de balises</div>-->
+         Organisez vos ressources à l'aide de balises
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gérez les balises de vos ressources"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/task-using-tags.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/fr-fr/bluexp-remediation/task-using-tags.html">
+        Gérez les balises de vos ressources
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concepts"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/fr-fr/bluexp-remediation/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/fr-fr/bluexp-remediation/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Concepts</div>-->
+         Concepts
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Éléments de base du modèle"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/reference-template-building-blocks.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/fr-fr/bluexp-remediation/reference-template-building-blocks.html">
+        Éléments de base du modèle
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Connaissances et support"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/fr-fr/bluexp-remediation/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/fr-fr/bluexp-remediation/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Connaissances et support</div>-->
+         Connaissances et support
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="S'inscrire pour obtenir de l'aide"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/task-support-registration.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/fr-fr/bluexp-remediation/task-support-registration.html">
+        S'inscrire pour obtenir de l'aide
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Obtenez de l'aide"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/task-get-help.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/fr-fr/bluexp-remediation/task-get-help.html">
+        Obtenez de l'aide
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Mentions légales"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task-define-templates.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/fr-fr/bluexp-remediation/legal-notices.html">
+        Mentions légales
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/fr-fr/bluexp-remediation"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/fr-fr/bluexp-remediation"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/fr-fr/bluexp-remediation/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La version française est une traduction automatique. La version anglaise prévaut sur la française en cas de divergence. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">Création de modèles d'application pour votre organisation</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-05-31 15:24:59 +0000">05/31/2023</time>
+        
+    
+    
+        <span>Contributeurs
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/fr-fr/bluexp-remediation/images/discuss-sm.svg" alt="" class="github-icon" />Suggérer des modifications</span>
+        <img src="/fr-fr/bluexp-remediation/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/fr-fr/bluexp-remediation/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/bluexp-remediation.fr-fr/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/fr-fr/bluexp-remediation/task-define-templates.html&page-title=Création de modèles d'application pour votre organisation" class="page-nav-contribute-link" role="button">Demander des modifications de la documentation</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/bluexp-remediation/blob/main/task-define-templates.adoc" class="page-nav-contribute-link" role="button">Modifier cette page</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >En savoir plus sur les contributions</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/fr-fr/bluexp-remediation/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/fr-fr/bluexp-remediation/pdfs/fullsite-sidebar/Documentation_sur_la_correction_BlueXP.pdf" >
+                    <img src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>Un fichier PDF de toute la documentation</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/fr-fr/bluexp-remediation/pdfs/sidebar/Commencez.pdf" 
+            
+          >
+            <img src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Commencez
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/fr-fr/bluexp-remediation/pdfs/sidebar/Utilisez_la_correction_BlueXP.pdf" 
+            
+          >
+            <img src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Utilisez la correction BlueXP
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/fr-fr/bluexp-remediation/pdfs/sidebar/Utilisez_des_modèles_pour_standardiser_la_création_de_ressources.pdf" 
+            
+          >
+            <img src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Utilisez des modèles pour standardiser la création de ressources
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/fr-fr/bluexp-remediation/pdfs/sidebar/Organisez_vos_ressources_à_l_aide_de_balises.pdf" 
+            
+          >
+            <img src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Organisez vos ressources à l'aide de balises
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/fr-fr/bluexp-remediation/pdfs/sidebar/Concepts.pdf" 
+            
+          >
+            <img src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Concepts
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/fr-fr/bluexp-remediation/pdfs/sidebar/Connaissances_et_support.pdf" 
+            
+          >
+            <img src="/fr-fr/bluexp-remediation/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Connaissances et support
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/fr-fr/bluexp-remediation/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Plusieurs fichiers PDF<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Sélectionnez une ou plusieurs des « actions » fournies par NetApp et créez rapidement un modèle d'application que votre entreprise peut utiliser pour commencer à optimiser la création des ressources.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="démarrage-rapide">Démarrage rapide</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour commencer rapidement, suivez ces étapes ou faites défiler jusqu'aux sections restantes pour obtenir de plus amples informations.</p>
+</div>
+<div class="ulist quick-margin-list">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png" alt="Une seule"></span> Vérifiez les prérequis requis</div>
+<ul>
+<li>
+<p>Avant de pouvoir créer un volume pour un système Cloud Volumes ONTAP, ONTAP sur site ou Azure NetApp Files à l'aide d'un modèle, assurez-vous qu'ils ont accès à un environnement de travail approprié dans lequel le volume sera déployé.</p>
+</li>
+</ul>
+</div>
+<div class="ulist quick-margin-list">
+<ul>
+<li>
+<p>Si vous prévoyez d'ajouter une « action » de service cloud à votre modèle, par exemple <a href="https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html" target="_blank" rel="noopener">"Sauvegarde et restauration BlueXP"</a> ou <a href="https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html" target="_blank" rel="noopener">"Classification BlueXP"</a>, assurez-vous que le service est actif et sous licence dans votre environnement.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png" alt="Deux"></span> Lancez le service modèles d'applications</div>
+<p>Sélectionnez <strong>Santé &gt; correction</strong>, cliquez sur l'onglet <strong>Editeur</strong> et sélectionnez les actions que vous utiliserez dans votre modèle.</p>
+</div>
+<div class="paragraph quick-margin-para">
+<div class="title"><span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png" alt="Trois"></span> Créez le modèle en sélectionnant « actions » et en définissant les paramètres</div>
+<p>Suivez les étapes de création et définissez les actions qui seront effectuées par le modèle.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="de-formation">De formation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Lisez les informations suivantes pour vous assurer que votre configuration est prise en charge.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Si vous n'avez pas encore de connecteur, <a href="https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html" target="_blank" rel="noopener">"Voir comment créer des connecteurs"</a> Pour AWS, Azure et GCP.</p>
+</li>
+<li>
+<p>Lorsque vous créez un modèle de volume Cloud Volumes ONTAP, assurez-vous que vous disposez d'un environnement de travail Cloud Volumes ONTAP disponible pour vos utilisateurs. Découvrez comment lancer un système Cloud Volumes ONTAP dans <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-aws.html" target="_blank" rel="noopener">"AWS"</a>, <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-azure.html" target="_blank" rel="noopener">"Azure"</a>, ou dans <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-getting-started-gcp.html" target="_blank" rel="noopener">"GCP"</a>.</p>
+</li>
+<li>
+<p>Lorsque vous créez un modèle de volume ONTAP sur site, veillez à disposer d'un environnement de travail ONTAP sur site. Découvrez comment <a href="https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html" target="_blank" rel="noopener">"Découvrez un système ONTAP sur site"</a> Dans BlueXP.</p>
+</li>
+<li>
+<p>Lors de la création d'un modèle de volume Azure NetApp Files, assurez-vous que vous disposez d'un environnement de travail Azure NetApp Files disponible pour vos utilisateurs. Découvrez comment <a href="https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html" target="_blank" rel="noopener">"Créer un environnement de travail Azure NetApp Files"</a> Dans BlueXP.</p>
+</li>
+<li>
+<p>Si vous prévoyez d'utiliser la sauvegarde et la restauration BlueXP pour sauvegarder un volume dans le modèle, vérifiez que votre environnement a activé la sauvegarde et la restauration BlueXP.</p>
+</li>
+<li>
+<p>Si vous prévoyez d'utiliser la classification BlueXP pour analyser les volumes dans le modèle, assurez-vous que votre environnement a activé la classification BlueXP.</p>
+</li>
+<li>
+<p>Si vous prévoyez d'activer la réplication BlueXP dans le modèle et que le modèle concerne un volume ONTAP sur site, le cluster ONTAP doit disposer d'une licence SnapMirror active.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exemples-de-création-de-ressources-à-laide-de-modèles">Exemples de création de ressources à l'aide de modèles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les modèles de ressources vous permettent de créer de nouveaux volumes ou un nouvel environnement de travail Cloud Volumes ONTAP.</p>
+</div>
+<div class="sect2">
+<h3 id="créez-un-modèle-pour-un-volume-cloud-volumes-ontap">Créez un modèle pour un volume Cloud Volumes ONTAP</h3>
+<div class="paragraph">
+<p>Voir <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-create-volumes.html" target="_blank" rel="noopener">"Provisionnement de volumes Cloud Volumes ONTAP"</a> Pour plus d'informations sur les paramètres à compléter dans le modèle de volume Cloud Volumes ONTAP.</p>
+</div>
+<div class="paragraph">
+<p>Pour cet exemple, nous allons créer un modèle nommé « volume CVO pour les bases de données » et inclure les 2 actions suivantes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Créer un volume Cloud Volumes ONTAP</p>
+<div class="paragraph">
+<p>Définissez le volume pour l'environnement AWS, configurez-le avec 100 Go de stockage, définissez la règle Snapshot sur « par défaut » et activez l'efficacité du stockage.</p>
+</div>
+</li>
+<li>
+<p>Sauvegardez et restaurez vos données BlueXP</p>
+<div class="paragraph">
+<p>Créer 30 sauvegardes quotidiennes, 13 sauvegardes hebdomadaires et 3 sauvegardes mensuelles (à l'aide de la politique de rétention_ de _3 mois).</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Sélectionnez <strong>Santé &gt; correction</strong>, cliquez sur l'onglet <strong>modèles</strong> et cliquez sur <strong>Ajouter un nouveau modèle</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Select_a Template</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_primary_action_cvo.png" alt="Capture d'écran indiquant comment sélectionner l'action principale qui sera exécutée à l'aide de ce modèle."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>Volume pour Cloud Volumes ONTAP + sauvegarde</strong> comme type de ressource à créer, puis cliquez sur <strong>commencer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Créer un volume dans Cloud Volumes ONTAP action Definition</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_define_action_cvo.png" alt="Capture d'écran montrant un modèle CVO vide que vous devez remplir."></span></p>
+</div>
+</li>
+<li>
+<p><strong>Nom de l'action</strong> : si vous le souhaitez, entrez un nom d'action personnalisé au lieu de la valeur par défaut.</p>
+</li>
+<li>
+<p><strong>Contexte:</strong> Entrez le contexte de l'environnement de travail Cloud Volumes ONTAP; si nécessaire.</p>
+<div class="paragraph">
+<p>Lorsque les utilisateurs lancent le modèle à partir d'un environnement de travail existant, ces informations sont automatiquement renseignées.</p>
+</div>
+<div class="paragraph">
+<p>Lorsque les utilisateurs lancent le modèle à partir du tableau de bord modèles (pas dans un contexte d'environnement de travail), ils doivent sélectionner l'environnement de travail et le SVM où le volume sera créé. C'est la raison pour laquelle ces champs sont marqués comme étant « modifiables ».</p>
+</div>
+</li>
+<li>
+<p><strong>Détails:</strong> Entrez le nom et la taille du volume.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champ</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer un nom en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom du volume doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez. Par exemple, vous pouvez indiquer que "db" est un préfixe, un suffixe ou un contenu requis ; il faut à l'utilisateur d'ajouter des noms de volume tels que "db_vol1", "vol1_db" ou "vol_db_1".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taille du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vous pouvez spécifier une plage de valeurs autorisées ou une taille fixe. Cette valeur est en GB. Pour notre exemple, nous pouvons ajouter une valeur fixe <strong>100</strong>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Étiquettes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saisissez une paire de noms et de valeurs pour une balise que vous souhaitez associer à ce volume. Par exemple, vous pouvez ajouter "centre de coûts" comme nom de balise et le code de centre de coûts "6655829" comme valeur. Vous pouvez associer plusieurs balises à un volume en ajoutant plusieurs paires de noms de balises et de valeurs.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Protection:</strong> Choisissez si les copies Snapshot du volume seront créées en sélectionnant « par défaut » ou une autre règle, ou bien « aucune » si vous ne souhaitez pas créer de copies Snapshot.</p>
+</li>
+<li>
+<p><strong>Profil d'utilisation :</strong> Choisissez si les fonctionnalités d'efficacité du stockage NetApp sont appliquées ou non au volume. Cela inclut le provisionnement fin, la déduplication et la compression. Pour notre exemple, vous gardez toujours un niveau d'efficacité du stockage activé.</p>
+</li>
+<li>
+<p><strong>Disk Type:</strong> Choisissez le fournisseur de stockage cloud et le type de disque. Certaines sélections de disques permettent également de sélectionner une valeur d'IOPS ou de débit (Mbit/s) minimale et maximale, définissant ainsi une certaine qualité de service (QoS).</p>
+</li>
+<li>
+<p><strong>Options de protocole:</strong> sélectionnez <strong>NFS</strong> ou <strong>SMB</strong> pour définir le protocole du volume. Puis le fournit les détails du protocole.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champs NFS</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contrôle d'accès</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indiquez si des contrôles d'accès sont nécessaires pour accéder au volume.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Export policy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Créez une export policy pour définir les clients dans le sous-réseau pouvant accéder au volume.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version NFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sélectionnez la version NFS du volume : <em>NFSv3</em> ou <em>NFSv4</em>, ou sélectionnez les deux.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champs SMB</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom de partage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer n'importe quel nom (texte libre) ou vous pouvez spécifier que le nom du partage doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sélectionnez le niveau d'accès à un partage pour les utilisateurs et les groupes (également appelés listes de contrôle d'accès ou listes de contrôle d'accès).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utilisateurs / groupes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spécifiez les utilisateurs ou groupes Windows locaux ou de domaine, ou les utilisateurs ou groupes UNIX. Si vous spécifiez un nom d'utilisateur Windows de domaine, vous devez inclure le domaine de l'utilisateur à l'aide du format domaine\nom d'utilisateur.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Tiering:</strong> Choisissez la règle de Tiering que vous souhaitez appliquer au volume, ou définissez cette règle sur « aucun » si vous ne souhaitez pas transférer les données inactives de ce volume vers le stockage objet.</p>
+<div class="paragraph">
+<p>Voir <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html#volume-tiering-policies" target="_blank" rel="noopener">"règles de tiering des volumes"</a> pour une vue d'ensemble, et voir <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html" target="_blank" rel="noopener">"Tiering des données inactives vers le stockage objet"</a> afin d'être certain que votre environnement est configuré pour le tiering.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> après avoir défini les paramètres requis pour cette action.</p>
+<div class="paragraph">
+<p>Si les valeurs du modèle sont correctement complétées, une coche verte est ajoutée à la case « Créer un volume dans Cloud Volumes ONTAP ».</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur la case <strong>Activer Cloud Backup sur le volume</strong> et la boîte de dialogue <em>Activer Cloud Backup sur la définition de l'action du volume</em> s'affiche pour vous permettre de renseigner les détails de la sauvegarde et de la restauration BlueXP.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_add_action.png" alt="Capture d'écran affichant des actions supplémentaires que vous pouvez ajouter au volume créé."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez la stratégie de sauvegarde * 3 mois Retention* pour créer 30 sauvegardes quotidiennes, 13 hebdomadaires et 3 mois.</p>
+</li>
+<li>
+<p>Sous les champs Environnement de travail et Nom du volume, trois sélections sont disponibles pour indiquer le volume sur lequel la sauvegarde est activée. Voir <a href="reference-template-building-blocks.html#pass-values-between-template-actions">"comment remplir ces champs"</a>.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> pour enregistrer la boîte de dialogue de sauvegarde et de restauration BlueXP.</p>
+</li>
+<li>
+<p>Entrez le nom du modèle <strong>Volume CVO pour les bases de données</strong> (pour cet exemple) dans le coin supérieur gauche.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>Paramètres et dérive</strong> pour fournir une description plus détaillée de sorte que ce modèle puisse être distingué d'autres modèles similaires, et vous pouvez ainsi activer dérive pour le modèle global, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>Dérive permet à BlueXP de surveiller les valeurs codées en dur que vous avez saisies pour les paramètres lors de la création de ce modèle.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>Enregistrer le modèle</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Résultat</div>
+<p>Le modèle est créé et vous êtes renvoyé au tableau de bord modèles où apparaît votre nouveau modèle.</p>
+</div>
+<div class="paragraph">
+<p>Voir <a href="#que-faire-après-avoir-créé-le-modèle">ce que vous devez dire à vos utilisateurs sur les modèles</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="créez-un-modèle-pour-un-volume-azure-netapp-files">Créez un modèle pour un volume Azure NetApp Files</h3>
+<div class="paragraph">
+<p>La création d'un modèle pour un volume Azure NetApp Files se fait de la même manière que la création d'un modèle pour un volume Cloud Volumes ONTAP.</p>
+</div>
+<div class="paragraph">
+<p>Voir <a href="https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-volumes.html#create-volumes" target="_blank" rel="noopener">"Provisionnement de volumes Azure NetApp Files"</a> Pour plus d'informations sur tous les paramètres à compléter dans le modèle de volume ANF.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Sélectionnez <strong>Santé &gt; correction</strong>, cliquez sur l'onglet <strong>modèles</strong> et cliquez sur <strong>Ajouter un nouveau modèle</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Select_a Template</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_primary_action_blank.png" alt="Capture d'écran indiquant comment sélectionner l'action principale qui sera exécutée à l'aide de ce modèle."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>modèle vierge</strong> et cliquez sur <strong>commencer</strong>.</p>
+</li>
+<li>
+<p>Sélectionnez <strong>Créer un volume dans Azure NetApp Files</strong> comme type de ressource à créer, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Créer un volume dans Azure NetApp Files action Definition</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_define_action_anf.png" alt="Capture d'écran montrant un modèle ANF vide que vous devez remplir."></span></p>
+</div>
+</li>
+<li>
+<p><strong>Nom de l'action</strong> : si vous le souhaitez, entrez un nom d'action personnalisé au lieu de la valeur par défaut.</p>
+</li>
+<li>
+<p><strong>Détails du volume :</strong> Entrez un nom et une taille de volume, et spécifiez éventuellement des balises pour le volume.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champ</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer un nom en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom du volume doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez. Par exemple, vous pouvez indiquer que "db" est un préfixe, un suffixe ou un contenu requis ; il faut à l'utilisateur d'ajouter des noms de volume tels que "db_vol1", "vol1_db" ou "vol_db_1".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taille du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vous pouvez spécifier une plage de valeurs autorisées ou une taille fixe. Cette valeur est en GB.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Étiquettes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saisissez une paire de noms et de valeurs pour une balise que vous souhaitez associer à ce volume. Par exemple, vous pouvez ajouter "centre de coûts" comme nom de balise et le code de centre de coûts "6655829" comme valeur. Vous pouvez associer plusieurs balises à un volume en ajoutant plusieurs paires de noms de balises et de valeurs.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Protocole:</strong> sélectionnez <strong>NFSv3</strong>, <strong>NFSv4.1</strong> ou <strong>SMB</strong> pour définir le protocole du volume. Puis le fournit les détails du protocole.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champs NFS</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chemin du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer n'importe quel chemin en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom du chemin d'accès doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Règles d'export-policy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Créez une export policy pour définir les clients dans le sous-réseau pouvant accéder au volume.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champs SMB</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chemin du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer n'importe quel chemin en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom du chemin d'accès doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Contexte:</strong> Entrez l'environnement de travail Azure NetApp Files, les détails d'un nouveau compte Azure NetApp Files ou d'un compte existant, et d'autres détails.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champ</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environnement de travail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lorsque les utilisateurs de l'administrateur du stockage lancent le modèle à partir d'un environnement de travail existant, ces informations sont automatiquement renseignées. Lorsque les utilisateurs lancent le modèle à partir du tableau de bord modèles (pas dans un contexte d'environnement de travail), ils doivent sélectionner l'environnement de travail dans lequel le volume sera créé.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom du compte NetApp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entrez le nom que vous souhaitez utiliser pour le compte.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ID d'abonnement Azure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entrez l'ID d'abonnement Azure. Il s'agit de l'ID complet dans un format similaire à "2b04f26-7de6-42eb-9234-e2903d7s327".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Région</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entrez la région à l'aide de <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.documents.locationnames?view=azure-dotnet#fields" target="_blank" rel="noopener">"nom de la région interne"</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom du groupe de ressources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entrez le nom du groupe de ressources à utiliser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom du pool de capacité</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entrez le nom d'un pool de capacité existant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sous-réseau</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entrez le vnet et le sous-réseau. Cette valeur inclut le chemin complet, dans un format similaire à "/souscriptions/&lt;ID_abonnement&gt;/resourceGroups/&lt;groupe_ressource&gt;/ fournisseurs/Microsoft.Network/virtualNetworks/&lt;vpc_name&gt;/subnets/&lt;subhet_name&gt;".</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Copie snapshot :</strong> Entrez l'ID d'instantané d'un instantané de volume existant si vous souhaitez créer ce nouveau volume à l'aide des caractéristiques d'un volume existant.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> après avoir défini les paramètres requis pour cette action.</p>
+</li>
+<li>
+<p>Saisissez le nom à utiliser pour le modèle en haut à gauche.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>Paramètres et dérive</strong> pour fournir une description plus détaillée de sorte que ce modèle puisse être distingué d'autres modèles similaires, et vous pouvez ainsi activer dérive pour le modèle global, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>Dérive permet à BlueXP de surveiller les valeurs codées en dur que vous avez saisies pour les paramètres lors de la création de ce modèle.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>Enregistrer le modèle</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Résultat</div>
+<p>Le modèle est créé et vous êtes renvoyé au tableau de bord modèles où apparaît votre nouveau modèle.</p>
+</div>
+<div class="paragraph">
+<p>Voir <a href="#que-faire-après-avoir-créé-le-modèle">ce que vous devez dire à vos utilisateurs sur les modèles</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="créez-un-modèle-pour-un-volume-ontap-sur-site">Créez un modèle pour un volume ONTAP sur site</h3>
+<div class="paragraph">
+<p>Voir <a href="https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-manage-ontap-connector.html#create-volumes" target="_blank" rel="noopener">"Comment provisionner des volumes ONTAP sur site"</a> Pour en savoir plus sur les paramètres à compléter dans le modèle de volume ONTAP sur site.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Sélectionnez <strong>Santé &gt; correction</strong>, cliquez sur l'onglet <strong>modèles</strong> et cliquez sur <strong>Ajouter un nouveau modèle</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Select_a Template</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_primary_action_blank.png" alt="Capture d'écran indiquant comment sélectionner l'action principale qui sera exécutée à l'aide de ce modèle."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>modèle vierge</strong> et cliquez sur <strong>commencer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Ajouter une nouvelle action</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_primary_action_onprem.png" alt="Capture d'écran indiquant comment sélectionner l'action principale à partir de la page Ajouter une nouvelle action."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>Créer un volume dans ONTAP</strong> sur site comme type de ressource à créer, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Create Volume in on-local ONTAP action Definition</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_define_action_onprem.png" alt="Capture d'écran montrant un modèle ONTAP sur site vierge que vous devez remplir."></span></p>
+</div>
+</li>
+<li>
+<p><strong>Nom de l'action</strong> : si vous le souhaitez, entrez un nom d'action personnalisé au lieu de la valeur par défaut.</p>
+</li>
+<li>
+<p><strong>Contexte:</strong> Entrez le contexte de l'environnement de travail ONTAP sur site, si nécessaire.</p>
+<div class="paragraph">
+<p>Lorsque les utilisateurs lancent le modèle à partir d'un environnement de travail existant, ces informations sont automatiquement renseignées.</p>
+</div>
+<div class="paragraph">
+<p>Lorsque les utilisateurs lancent le modèle à partir du tableau de bord modèles (pas dans un contexte d'environnement de travail), ils doivent sélectionner l'environnement de travail, le SVM et l'agrégat dans lequel le volume sera créé.</p>
+</div>
+</li>
+<li>
+<p><strong>Détails:</strong> Entrez le nom et la taille du volume.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champ</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer un nom en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom du volume doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez. Par exemple, vous pouvez indiquer que "db" est un préfixe, un suffixe ou un contenu requis ; il faut à l'utilisateur d'ajouter des noms de volume tels que "db_vol1", "vol1_db" ou "vol_db_1".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Taille du volume</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vous pouvez spécifier une plage de valeurs autorisées ou une taille fixe. Cette valeur est en GB. Pour notre exemple, nous pouvons ajouter une valeur fixe <strong>100</strong>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Étiquettes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saisissez une paire de noms et de valeurs pour une balise que vous souhaitez associer à ce volume. Par exemple, vous pouvez ajouter "centre de coûts" comme nom de balise et le code de centre de coûts "6655829" comme valeur. Vous pouvez associer plusieurs balises à un volume en ajoutant plusieurs paires de noms de balises et de valeurs.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Protection:</strong> Choisissez si les copies Snapshot du volume seront créées en sélectionnant « par défaut » ou une autre règle, ou bien « aucune » si vous ne souhaitez pas créer de copies Snapshot.</p>
+</li>
+<li>
+<p><strong>Profil d'utilisation :</strong> Choisissez si les fonctionnalités d'efficacité du stockage NetApp sont appliquées ou non au volume. Cela inclut le provisionnement fin, la déduplication et la compression.</p>
+</li>
+<li>
+<p><strong>Options de protocole:</strong> sélectionnez <strong>NFS</strong> ou <strong>SMB</strong> pour définir le protocole du volume. Puis le fournit les détails du protocole.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champs NFS</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contrôle d'accès</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indiquez si des contrôles d'accès sont nécessaires pour accéder au volume.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Export policy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Créez une export policy pour définir les clients dans le sous-réseau pouvant accéder au volume.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version NFS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sélectionnez la version NFS du volume : <em>NFSv3</em> ou <em>NFSv4</em>, ou sélectionnez les deux.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champs SMB</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom de partage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer n'importe quel nom (texte libre) ou vous pouvez spécifier que le nom du partage doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sélectionnez le niveau d'accès à un partage pour les utilisateurs et les groupes (également appelés listes de contrôle d'accès ou listes de contrôle d'accès).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utilisateurs / groupes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spécifiez les utilisateurs ou groupes Windows locaux ou de domaine, ou les utilisateurs ou groupes UNIX. Si vous spécifiez un nom d'utilisateur Windows de domaine, vous devez inclure le domaine de l'utilisateur à l'aide du format domaine\nom d'utilisateur.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> après avoir défini les paramètres requis pour cette action.</p>
+<div class="paragraph">
+<p>Si les valeurs du modèle sont correctement terminées, une coche verte est ajoutée à la case « Créer un volume dans ONTAP sur site ».</p>
+</div>
+</li>
+<li>
+<p>Entrez le nom du modèle dans le coin supérieur gauche.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>Paramètres et dérive</strong> pour fournir une description plus détaillée de sorte que ce modèle puisse être distingué d'autres modèles similaires, et vous pouvez ainsi activer dérive pour le modèle global, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>Dérive permet à BlueXP de surveiller les valeurs codées en dur que vous avez saisies pour les paramètres lors de la création de ce modèle.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>Enregistrer le modèle</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Résultat</div>
+<p>Le modèle est créé et vous êtes renvoyé au tableau de bord des modèles où apparaît votre nouveau modèle.</p>
+</div>
+<div class="paragraph">
+<p>Voir <a href="#que-faire-après-avoir-créé-le-modèle">ce que vous devez dire à vos utilisateurs sur les modèles</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="créez-un-modèle-pour-un-environnement-de-travail-cloud-volumes-ontap">Créez un modèle pour un environnement de travail Cloud Volumes ONTAP</h3>
+<div class="paragraph">
+<p>Vous pouvez créer un environnement de travail Cloud Volumes ONTAP à un seul nœud ou haute disponibilité à l'aide de modèles.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-remediation/images/note.svg" alt="Remarque">
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Actuellement, ce support est exclusivement réservé aux environnements AWS.</p>
+</li>
+<li>
+<p>Ce modèle ne crée pas le premier volume dans l'environnement de travail. Vous devez ajouter une action « Créer un volume dans Cloud Volumes ONTAP » dans le modèle pour créer le volume.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Voir <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html#launching-a-single-node-cloud-volumes-ontap-system-in-aws" target="_blank" rel="noopener">"Comment lancer un système Cloud Volumes ONTAP à un seul nœud dans AWS"</a> ou un <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html#launching-a-cloud-volumes-ontap-ha-pair-in-aws" target="_blank" rel="noopener">"Paire HA Cloud Volumes ONTAP dans AWS"</a> pour les prérequis qui doivent être en place et pour obtenir des détails sur tous les paramètres que vous devrez définir dans ce modèle.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Sélectionnez <strong>Santé &gt; correction</strong>, cliquez sur l'onglet <strong>modèles</strong> et cliquez sur <strong>Ajouter un nouveau modèle</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Select_a Template</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_primary_action_blank.png" alt="Capture d'écran indiquant comment sélectionner l'action principale qui sera exécutée à l'aide de ce modèle."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>modèle vierge</strong> et cliquez sur <strong>commencer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Ajouter une nouvelle action</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_cvo_env_aws.png" alt="Capture d'écran indiquant comment sélectionner l'action principale à partir de la page Ajouter une nouvelle action."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>Créer un environnement de travail dans AWS (nœud unique)</strong> ou <strong>Créer un environnement de travail dans AWS (haute disponibilité)</strong> comme type de ressource à créer, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>Pour cet exemple, la page <em>Create Working Environment in AWS (nœud unique)</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_cvo_env_aws1.png" alt="Capture d'écran montrant un modèle d'environnement de travail Cloud Volumes ONTAP vierge à remplir."></span></p>
+</div>
+</li>
+<li>
+<p><strong>Nom de l'action</strong> : si vous le souhaitez, entrez un nom d'action personnalisé au lieu de la valeur par défaut.</p>
+</li>
+<li>
+<p><strong>Détails et informations d'identification</strong> : sélectionnez les informations d'identification AWS à utiliser, entrez un nom d'environnement de travail et ajoutez des balises, si nécessaire.</p>
+<div class="paragraph">
+<p>Certains champs de cette page sont explicites. Le tableau suivant décrit les champs pour lesquels vous pouvez avoir besoin de conseils :</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Champ</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informations d'identification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Il s'agit des informations d'identification du compte d'administration du cluster Cloud Volumes ONTAP. Vous pouvez utiliser ces identifiants pour vous connecter à Cloud Volumes ONTAP via ONTAP System Manager ou son interface de ligne de commandes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nom de l'environnement de travail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BlueXP utilise le nom de l'environnement de travail pour nommer à la fois le système Cloud Volumes ONTAP et l'instance Amazon EC2. Il utilise également le nom comme préfixe pour le groupe de sécurité prédéfini, si vous sélectionnez cette option. Cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer n'importe quel nom en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom de l'environnement de travail doit avoir un certain préfixe ou suffixe, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Étiquettes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Les étiquettes AWS sont des métadonnées pour vos ressources AWS. BlueXP ajoute les balises à l'instance Cloud Volumes ONTAP et à chaque ressource AWS associée à l'instance. Pour plus d'informations sur les étiquettes, reportez-vous à la section <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html" target="_blank" rel="noopener">"Documentation AWS : balisage des ressources Amazon EC2"</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Localisation et connectivité</strong> : saisissez les informations de réseau que vous avez enregistrées dans le <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config.html#collect-networking-information" target="_blank" rel="noopener">"Fiche AWS"</a>. Il s'agit notamment de la région AWS, du VPC, du sous-réseau et du groupe de sécurité.</p>
+<div class="paragraph">
+<p>Si vous disposez d'un poste externe AWS, vous pouvez déployer un système Cloud Volumes ONTAP à un seul nœud dans cet envoi en sélectionnant le VPC Outpost. L'expérience est la même que tout autre VPC qui réside dans AWS.</p>
+</div>
+</li>
+<li>
+<p><strong>Méthode d'authentification</strong> : sélectionnez la méthode d'authentification SSH que vous souhaitez utiliser, soit un mot de passe, soit une paire de clés.</p>
+</li>
+<li>
+<p><strong>Data Encryption</strong> : choisissez pas de cryptage de données ou de cryptage géré par AWS.</p>
+<div class="paragraph">
+<p>Pour le chiffrement géré par AWS, vous pouvez choisir une autre clé maître client (CMK) dans votre compte ou un autre compte AWS.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-setting-up-kms.html" target="_blank" rel="noopener">"Découvrez comment configurer le KMS AWS pour Cloud Volumes ONTAP"</a>.</p>
+</div>
+</li>
+<li>
+<p><strong>Méthode de charge</strong> : spécifiez l'option de charge que vous souhaitez utiliser avec ce système.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-licensing-aws.html" target="_blank" rel="noopener">"Découvrez ces méthodes de charge"</a>.</p>
+</div>
+</li>
+<li>
+<p><strong>Compte sur le site de support NetApp</strong> : sélectionnez un compte sur le site de support NetApp.</p>
+</li>
+<li>
+<p><strong>Packages préconfigurés</strong> : sélectionnez l'un des quatre packages préconfigurés qui déterminera plusieurs facteurs pour les volumes créés dans l'environnement de travail.</p>
+</li>
+<li>
+<p><strong>Configuration SMB</strong> : si vous prévoyez de déployer des volumes à l'aide de SMB dans cet environnement de travail, vous pouvez configurer un serveur CIFS et les éléments de configuration associés.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> après avoir défini les paramètres requis pour cette action.</p>
+<div class="paragraph">
+<p>Si les valeurs du modèle sont correctement terminées, une coche verte est ajoutée à la case « Créer un environnement de travail dans AWS (nœud unique) ».</p>
+</div>
+</li>
+<li>
+<p>Vous pouvez ajouter une autre action dans ce modèle pour créer un volume pour cet environnement de travail. Si c'est le cas, cliquez sur <span class="image"><img src="./media/button_plus_sign_round.png" alt="bouton plus"></span> et ajoutez cette action. Découvrez comment <a href="#créez-un-modèle-pour-un-volume-cloud-volumes-ontap">Créez un modèle pour un volume Cloud Volumes ONTAP</a> pour plus d'informations.</p>
+</li>
+<li>
+<p>Entrez le nom du modèle dans le coin supérieur gauche.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>Paramètres et dérive</strong> pour fournir une description plus détaillée de sorte que ce modèle puisse être distingué d'autres modèles similaires, et vous pouvez ainsi activer dérive pour le modèle global, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>Dérive permet à BlueXP de surveiller les valeurs codées en dur que vous avez saisies pour les paramètres lors de la création de ce modèle.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>Enregistrer le modèle</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Résultat</div>
+<p>Le modèle est créé et vous êtes renvoyé au tableau de bord des modèles où apparaît votre nouveau modèle.</p>
+</div>
+<div class="paragraph">
+<p>Voir <a href="#que-faire-après-avoir-créé-le-modèle">ce que vous devez dire à vos utilisateurs sur les modèles</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exemples-de-recherche-de-ressources-existantes-à-laide-de-modèles">Exemples de recherche de ressources existantes à l'aide de modèles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>À l'aide de l'action <em>Find Existing Resources</em>, vous pouvez trouver des environnements de travail spécifiques ou trouver des volumes existants en fournissant une variété de filtres afin que vous puissiez limiter votre recherche aux ressources qui vous intéressent. Une fois les ressources correctes trouvent, vous pouvez ajouter des volumes à un environnement de travail ou activer un service cloud sur les volumes résultants.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-remediation/images/note.svg" alt="Remarque">
+</td>
+<td class="content">
+Pour l'instant, des volumes sont disponibles dans les systèmes Cloud Volumes ONTAP, ONTAP sur site et Azure NetApp Files. Vous pouvez également activer la sauvegarde et la restauration BlueXP sur Cloud Volumes ONTAP et les volumes ONTAP sur site. D'autres ressources et services seront disponibles ultérieurement.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="rechercher-des-volumes-existants-et-activer-un-service-cloud">Rechercher des volumes existants et activer un service cloud</h3>
+<div class="paragraph">
+<p>La fonctionnalité actuelle <em>Rechercher des ressources</em> action vous permet de rechercher des volumes dans les environnements de travail Cloud Volumes ONTAP et ONTAP sur site dans lesquels la sauvegarde et la restauration BlueXP ou la classification BlueXP n'est pas activée pour le moment. Lorsque vous activez la sauvegarde et la restauration BlueXP sur des volumes spécifiques, cette action définit également la règle de sauvegarde que vous avez configurée comme règle par défaut pour cet environnement de travail. De cette façon, tous les volumes futurs de ces environnements de travail peuvent utiliser la même règle de sauvegarde.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Sélectionnez <strong>Santé &gt; correction</strong>, cliquez sur l'onglet <strong>modèles</strong> et cliquez sur <strong>Ajouter un nouveau modèle</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Select_a Template</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_primary_action_blank.png" alt="Capture d'écran indiquant comment sélectionner l'action principale qui sera exécutée à l'aide de ce modèle."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>modèle vierge</strong> et cliquez sur <strong>commencer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Ajouter une nouvelle action</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_find_resource_action.png" alt="Capture d'écran indiquant comment sélectionner l'action Rechercher des ressources existantes dans la page Ajouter une nouvelle action."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>Rechercher les ressources existantes</strong> comme type d'action à définir, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Rechercher des ressources existantes action Definition</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_define_find_resource_action1.png" alt="Capture d'écran indiquant un modèle de recherche de ressources existantes vierge que vous devez remplir."></span></p>
+</div>
+</li>
+<li>
+<p><strong>Nom de l'action</strong> : saisissez un nom d'action personnalisé au lieu de la valeur par défaut. Par exemple, « recherchez de grands volumes sur le cluster ABC et activez la sauvegarde ».</p>
+</li>
+<li>
+<p><strong>Type de ressource :</strong> sélectionnez le type de ressource que vous souhaitez trouver. Dans ce cas, vous pouvez sélectionner <strong>volumes dans Cloud Volumes ONTAP</strong>.</p>
+<div class="paragraph">
+<p>Il s'agit de la seule entrée requise pour cette action. Cliquez sur <strong>Continuer</strong> maintenant et vous recevrez une liste de tous les volumes sur tous les systèmes Cloud Volumes ONTAP de votre environnement.</p>
+</div>
+<div class="paragraph">
+<p>Il est recommandé de remplir quelques filtres afin de réduire le nombre de résultats (dans ce cas, les volumes) sur lesquels vous appliquerez l'action de sauvegarde et de restauration BlueXP.</p>
+</div>
+</li>
+<li>
+<p>Dans la zone <em>context</em>, vous pouvez sélectionner un environnement de travail spécifique et d'autres détails sur cet environnement de travail.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_define_find_resource_filter_context.png" alt="Capture d'écran affichant les filtres de contexte que vous pouvez appliquer au modèle Rechercher des ressources existantes."></span></p>
+</div>
+</li>
+<li>
+<p>Dans la zone <em>Details</em>, vous pouvez sélectionner le nom du volume, la plage de taille du volume et toutes les balises affectées aux volumes.</p>
+<div class="paragraph">
+<p>Pour le nom du volume, cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer un nom en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom du volume doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.</p>
+</div>
+<div class="paragraph">
+<p>Pour la taille de volume, vous pouvez spécifier une plage ; par exemple, tous les volumes entre 100 Gio et 500 Gio.</p>
+</div>
+<div class="paragraph">
+<p>Pour les balises, vous pouvez affiner davantage la recherche de sorte que les résultats n'affichent que les volumes avec certaines paires clé/valeur de balise.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_define_find_resource_filter_details.png" alt="Capture d'écran affichant les filtres Détails que vous pouvez appliquer au modèle Rechercher des ressources existantes."></span></p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>Continuer</strong> et la page se met à jour pour afficher les critères de recherche que vous avez définis dans le modèle.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_define_find_resource_search_criteria.png" alt="Capture d'écran affichant les critères de recherche que vous avez définis pour le modèle Rechercher des ressources existantes."></span></p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>Tester vos critères de recherche maintenant</strong> pour voir les résultats actuels.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si les résultats ne correspondent pas à vos attentes, cliquez sur <span class="image"><img src="./media/screenshot_edit_icon.gif" alt="modifier l'icône du crayon"></span> À côté de <em>Search Criteria</em> et affinez votre recherche plus loin.</p>
+</li>
+<li>
+<p>Lorsque les résultats sont bons, cliquez sur <strong>Done</strong>.</p>
+<div class="paragraph">
+<p>L'action <em>Find Existing Resources</em> terminée s'affiche dans la fenêtre de l'éditeur.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cliquez sur le signe plus pour ajouter une autre action, sélectionnez <strong>Activer la sauvegarde dans le Cloud sur le volume</strong>, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>L'action <em>Activer la sauvegarde dans le Cloud sur le volume</em> est ajoutée à la fenêtre.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_add_backup_action.png" alt="Copie d'écran montrant les étapes d'ajout d'une action de sauvegarde et de restauration BlueXP à votre modèle."></span></p>
+</div>
+</li>
+<li>
+<p>Vous pouvez maintenant définir les critères de sauvegarde comme décrit dans <a href="#ajouter-la-fonctionnalité-de-sauvegarde-à-un-volume">Ajout de la fonctionnalité de sauvegarde à un volume</a> De sorte que le modèle applique la stratégie de sauvegarde correcte aux volumes que vous sélectionnez à partir de l'action <em>Find Existing Resources</em>.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> pour enregistrer la personnalisation que vous avez effectuée dans l'action de sauvegarde, puis cliquez sur <strong>Enregistrer le modèle</strong> lorsque vous avez terminé.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Résultat</div>
+<p>Le modèle est créé et vous êtes renvoyé au tableau de bord des modèles où apparaît votre nouveau modèle.</p>
+</div>
+<div class="paragraph">
+<p>Voir <a href="#que-faire-après-avoir-créé-le-modèle">ce que vous devez dire à vos utilisateurs sur les modèles</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="identifier-les-environnements-de-travail-existants">Identifier les environnements de travail existants</h3>
+<div class="paragraph">
+<p>À l'aide de l'action <em>Find Existing Resources</em>, vous pouvez trouver l'environnement de travail, puis utiliser d'autres actions de modèle, telles que la création d'un volume, pour effectuer facilement des actions sur l'environnement de travail existant.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Étapes</div>
+<ol class="arabic">
+<li>
+<p>Sélectionnez <strong>Santé &gt; correction</strong>, cliquez sur l'onglet <strong>modèles</strong> et cliquez sur <strong>Ajouter un nouveau modèle</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Select_a Template</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_primary_action_blank.png" alt="Capture d'écran indiquant comment sélectionner l'action principale qui sera exécutée à l'aide de ce modèle."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>modèle vierge</strong> et cliquez sur <strong>commencer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Ajouter une nouvelle action</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_create_template_find_resource_action.png" alt="Capture d'écran indiquant comment sélectionner l'action Rechercher des ressources existantes dans la page Ajouter une nouvelle action."></span></p>
+</div>
+</li>
+<li>
+<p>Sélectionnez <strong>Rechercher les ressources existantes</strong> comme type d'action à définir, puis cliquez sur <strong>appliquer</strong>.</p>
+<div class="paragraph">
+<p>La page <em>Rechercher des ressources existantes action Definition</em> s'affiche.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_define_find_work_env.png" alt="Capture d'écran indiquant un modèle de recherche de ressources existantes vierge que vous devez remplir."></span></p>
+</div>
+</li>
+<li>
+<p><strong>Nom de l'action</strong> : saisissez un nom d'action personnalisé au lieu de la valeur par défaut. Par exemple, « trouver des environnements de travail qui incluent Dallas ».</p>
+</li>
+<li>
+<p><strong>Type de ressource :</strong> sélectionnez le type de ressource que vous souhaitez trouver. Dans ce cas, vous sélectionnez <strong>environnements de travail</strong>.</p>
+<div class="paragraph">
+<p>Il s'agit de la seule entrée requise pour cette action. Vous pouvez cliquer sur <strong>Continuer</strong> maintenant et vous recevrez une liste de tous les environnements de travail de votre environnement.</p>
+</div>
+<div class="paragraph">
+<p>Il est recommandé de remplir quelques filtres afin de réduire le nombre de résultats (dans ce cas, les environnements de travail).</p>
+</div>
+</li>
+<li>
+<p>Après avoir défini quelques filtres dans la zone <em>Details</em>, vous pouvez sélectionner un environnement de travail spécifique.</p>
+</li>
+<li>
+<p>Cliquez sur <strong>Continuer</strong> pour enregistrer vos paramètres, puis cliquez sur <strong>terminé</strong>.</p>
+</li>
+<li>
+<p>Entrez le nom du modèle dans le coin supérieur gauche, puis cliquez sur <strong>Enregistrer le modèle</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Résultat</div>
+<p>Le modèle est créé et vous êtes renvoyé au tableau de bord des modèles où apparaît votre nouveau modèle.</p>
+</div>
+<div class="paragraph">
+<p>Voir <a href="#que-faire-après-avoir-créé-le-modèle">ce que vous devez dire à vos utilisateurs sur les modèles</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exemples-dactivation-de-services-à-laide-de-modèles">Exemples d'activation de services à l'aide de modèles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Avec les modèles de services, vous pouvez activer les services de sauvegarde et de restauration BlueXP, de classification BlueXP ou de réplication (SnapMirror) sur un nouveau volume créé.</p>
+</div>
+<div class="sect2">
+<h3 id="ajouter-la-fonctionnalité-de-sauvegarde-à-un-volume">Ajouter la fonctionnalité de sauvegarde à un volume</h3>
+<div class="paragraph">
+<p>Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous souhaitez créer régulièrement des sauvegardes du volume à l'aide de <a href="https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html" target="_blank" rel="noopener">"Sauvegarde et restauration BlueXP"</a> services.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-remediation/images/tip.svg" alt="Astuce">
+</td>
+<td class="content">
+Cette action ne s'applique pas aux volumes Azure NetApp Files.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_backup.png" alt="Capture d'écran de la page pour activer la fonctionnalité de sauvegarde de vos volumes."></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Stratégie</strong> : sélectionnez la stratégie de sauvegarde que vous souhaitez utiliser.</p>
+</li>
+<li>
+<p><strong>Context</strong> : par défaut, les variables sont remplies pour l'environnement de travail, la machine virtuelle de stockage et le volume pour indiquer que vous allez créer des sauvegardes pour le volume créé précédemment dans ce même modèle. Donc, si c'est ce que vous voulez faire, vous êtes tous ensemble.</p>
+<div class="paragraph">
+<p>Si vous souhaitez créer des sauvegardes pour un autre volume, vous pouvez entrer ces informations manuellement. Découvrez comment <a href="reference-template-building-blocks.html#pass-values-between-template-actions">"Renseignez les champs de contexte"</a> pour indiquer un autre volume.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> pour enregistrer vos modifications.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ajoutez-la-fonctionnalité-de-classification-bluexp-à-un-volume">Ajoutez la fonctionnalité de classification BlueXP à un volume</h3>
+<div class="paragraph">
+<p>Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle que vous voulez analyser le volume pour vérifier la conformité et la classification à l'aide du <a href="https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html" target="_blank" rel="noopener">"Classification BlueXP"</a> services.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_data_sense.png" alt="Capture d'écran de la page pour activer la fonctionnalité de numérisation de vos volumes."></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Context</strong>: Par défaut, les variables sont remplies pour l'environnement de travail, le nom du volume, l'UUID du volume, le chemin du volume et le protocole pour indiquer que vous allez analyser les données pour le volume créé précédemment dans ce même modèle. Donc, si c'est ce que vous voulez faire, vous êtes tous ensemble.</p>
+<div class="paragraph">
+<p>Si vous souhaitez analyser des données pour un autre volume, vous pouvez saisir ces informations manuellement. Découvrez comment <a href="reference-template-building-blocks.html#pass-values-between-template-actions">"Renseignez les champs de contexte"</a> pour indiquer un autre volume.</p>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> pour enregistrer vos modifications.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ajoutez-la-fonctionnalité-de-réplication-bluexp-à-un-volume">Ajoutez la fonctionnalité de réplication BlueXP à un volume</h3>
+<div class="paragraph">
+<p>Lors de la création d'un modèle de volume, vous pouvez ajouter le modèle de réplication des données du volume vers un autre volume à l'aide de l' <a href="https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html" target="_blank" rel="noopener">"La réplication BlueXP"</a> services. Vous pouvez répliquer des données vers un cluster Cloud Volumes ONTAP ou vers un cluster ONTAP sur site.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-remediation/images/tip.svg" alt="Astuce">
+</td>
+<td class="content">
+Cette action ne s'applique pas aux volumes Azure NetApp Files.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>La fonctionnalité de réplication BlueXP se compose de trois parties : la sélection du volume source, la sélection du volume de destination et la définition des paramètres de réplication. Chaque section est décrite ci-dessous.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Détails de la source</strong> : saisissez les détails du volume source que vous souhaitez répliquer :</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_replication_source.png" alt="Capture d'écran de la page pour définir l'emplacement du volume source de réplication BlueXP."></span></p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Par défaut, les trois premières variables sont remplies pour l'environnement de travail, la machine virtuelle de stockage et le volume afin de indiquer que vous allez répliquer le volume créé précédemment dans ce même modèle. Donc, si c'est ce que vous voulez faire, vous êtes tous ensemble.</p>
+<div class="paragraph">
+<p>Si vous souhaitez répliquer un autre volume, vous pouvez saisir ces informations manuellement. Découvrez comment <a href="reference-template-building-blocks.html#pass-values-between-template-actions">"Renseignez les champs de contexte"</a> pour indiquer un autre volume.</p>
+</div>
+</li>
+<li>
+<p>La réplication BlueXP nécessite que les environnements de travail source et de destination soient connectés via leurs LIF intercluster. Entrer l'adresse IP LIF intercluster pour l'environnement de travail source.</p>
+<div class="paragraph">
+<p>Pour obtenir ces informations : double-cliquez sur l'environnement de travail, cliquez sur l'icône du menu, puis cliquez sur informations.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Détails de destination</strong> : saisissez les détails du volume de destination qui sera créé par l'opération de réplication :</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_replication_dest.png" alt="Capture d'écran de la page pour définir l'emplacement du volume de destination de la réplication BlueXP."></span></p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Sélectionnez l'environnement de travail dans lequel le volume sera créé.</p>
+</li>
+<li>
+<p>Sélectionnez la VM de stockage sur laquelle le volume sera stocké.</p>
+</li>
+<li>
+<p>Lors de la réplication d'un volume vers un cluster Cloud Volumes ONTAP (pas vers un cluster ONTAP sur site), vous devez spécifier le fournisseur de destination (AWS, Azure ou GCP).</p>
+</li>
+<li>
+<p>Lors de la réplication d'un volume sur un cluster Cloud Volumes ONTAP, vous pouvez spécifier si le Tiering des volumes est activé sur le volume de destination.</p>
+</li>
+<li>
+<p>Pour le nom du volume de destination, cliquez dans le champ et sélectionnez l'une des 5 options. Vous pouvez laisser l'administrateur entrer un nom en sélectionnant <strong>texte libre</strong>, ou vous pouvez spécifier que le nom du volume doit avoir un préfixe ou un suffixe spécifique, qu'il <em>contient</em> certains caractères, ou qu'il suit les règles d'une expression régulière (regex) que vous saisissez.</p>
+</li>
+<li>
+<p>La réplication BlueXP nécessite que les environnements de travail source et de destination soient connectés via leurs LIF intercluster. Entrer l'adresse IP LIF intercluster pour l'environnement de travail de destination.</p>
+</li>
+<li>
+<p>Sélectionnez l'agrégat sur lequel le volume va résider.</p>
+</li>
+<li>
+<p>Lors de la réplication d'un volume dans un cluster Cloud Volumes ONTAP (pas vers un cluster ONTAP sur site), vous devez spécifier le type de disque à utiliser pour le nouveau volume.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Détails de la réplication</strong> : saisissez les détails sur le type et la fréquence de l'opération de réplication :</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_replication_policy.png" alt="Capture d'écran de la page pour définir les paramètres de réplication BlueXP pour la relation."></span></p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Sélectionner <a href="https://docs.netapp.com/us-en/bluexp-replication/concept-replication-policies.html#types-of-replication-policies" target="_blank" rel="noopener">"règle de réplication"</a> que vous voulez utiliser.</p>
+</li>
+<li>
+<p>Choisissez une copie unique ou une planification de réplication récurrente.</p>
+</li>
+<li>
+<p>Activez la surveillance de l'état de la réplication si vous souhaitez que le rapport de dérive inclut l'intégrité de la réplication de la relation SnapMirror ainsi que l'heure de décalage, l'état et l'heure du dernier transfert. <a href="task-check-template-compliance.html#bluexp-replication-health-details-in-the-drift-report">"Voyez ce que cela ressemble dans le rapport de dérive"</a>.</p>
+</li>
+<li>
+<p>Indiquez si vous souhaitez définir une limite de taux de transfert, puis saisissez le taux maximal (en kilo-octets par seconde) auquel les données peuvent être transférées. Vous pouvez entrer une valeur fixe ou fournir un minimum et un maximum et laisser l'administrateur du stockage sélectionner une valeur dans cette plage.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Cliquez sur <strong>appliquer</strong> pour enregistrer vos modifications.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="que-faire-après-avoir-créé-le-modèle">Que faire après avoir créé le modèle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Une fois le modèle créé, informez vos administrateurs du stockage qu'ils peuvent utiliser lors de la création de nouveaux volumes et environnements de travail.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez les orienter vers <a href="task-run-templates.html">"Création de ressources à l'aide de modèles"</a> pour plus d'informations.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="modifier-ou-supprimer-un-modèle">Modifier ou supprimer un modèle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vous pouvez modifier un modèle si vous devez modifier l'un des paramètres. Après avoir enregistré vos modifications, toutes les ressources futures créées à partir du modèle utiliseront les nouvelles valeurs de paramètres.</p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez également supprimer un modèle si vous n'en avez plus besoin. La suppression d'un modèle n'affecte aucune des ressources créées avec le modèle. Toutefois, aucune vérification de conformité à la dérive ne peut être effectuée après la suppression du modèle.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_edit_remove.png" alt="Capture d'écran indiquant comment modifier un modèle ou supprimer un modèle."></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="faites-une-copie-dun-modèle">Faites une copie d'un modèle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vous pouvez créer une copie d'un modèle existant. Cela peut vous faire gagner beaucoup de temps si vous souhaitez créer un nouveau modèle très similaire à un modèle existant. Il vous suffit de faire le doublon avec un nouveau nom, puis vous pouvez modifier le modèle pour modifier les deux éléments qui rendent le modèle unique.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_duplicate.png" alt="Capture d'écran indiquant comment dupliquer un modèle."></span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/fr-fr/bluexp-remediation/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/fr-fr/bluexp-remediation/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">Sur cette page</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Conditions d'utilisation</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Déclaration de confidentialité</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Déclaration sur les cookies</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Paramètres des cookies</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Envoyer des commentaires à propos de cette page</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/fr-fr/bluexp-remediation/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/fr-fr/bluexp-remediation/js/prism.js'></script>
+      <script type="text/javascript" src='/fr-fr/bluexp-remediation/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/fr-fr/bluexp-remediation/js/ie-tabbed-blocks.js'></script>
+    <script src='/fr-fr/bluexp-remediation/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
